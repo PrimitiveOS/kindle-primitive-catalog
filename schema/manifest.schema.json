@@ -26,7 +26,9 @@
     },
     "hooks": {
       "type": "array", "uniqueItems": true,
-      "items": { "enum": ["hooks/post-install.sh", "hooks/pre-uninstall.sh"] }
+      "items": { "enum": ["hooks/post-install.sh", "hooks/pre-uninstall.sh"] },
+      "if": { "contains": { "const": "hooks/post-install.sh" } },
+      "then": { "contains": { "const": "hooks/pre-uninstall.sh" } }
     }
   }
 }
