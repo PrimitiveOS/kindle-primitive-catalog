@@ -10,7 +10,7 @@
   "categories": [
     "utilities"
   ],
-  "description": "A small sample app for testing Primitive Launcher and Store.",
+  "description": "A small sample app for building and testing native PrimitiveOS apps.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-app-template",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",

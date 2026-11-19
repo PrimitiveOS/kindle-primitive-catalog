@@ -3,7 +3,7 @@
 - [ ] `apps/<id>/app.json` follows the schema; `scripts/check-app.sh` passes.
 - [ ] Icon 256 × 256 grayscale; screenshots 632 × 840 grayscale, no device frames, no text over pictures.
 - [ ] The description says plainly what the app does; `changes` flags are true and complete.
-- [ ] The licence is named and allows what `source` says (`hosted` needs a redistributable licence or a Primitive app).
+- [ ] The licence is named and allows what `source` says (`hosted` needs a redistributable licence or a first-party PrimitiveOS app).
 
 ## Quality bar
 

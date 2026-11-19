@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage Primitive Store listings using downloaded GitHub ARMHF releases."""
+"""Stage PrimitiveOS Store listings using downloaded GitHub ARMHF releases."""
 
 import argparse
 import hashlib
