@@ -58,7 +58,7 @@ def release_notes(checkout, app_id, version, review, previous):
         "Add desktop simulation and a Store-ready package.",
     }
     notes = "\n".join(" ".join(line.split()) for line in lines[:5] if line.strip() not in local_notes)
-    fallback = "Updated Kindle ARMHF package." if previous else "First Primitive Store release."
+    fallback = "Updated Kindle ARMHF package." if previous else "Initial release."
     return notes[:500].rstrip() or fallback
 
 
