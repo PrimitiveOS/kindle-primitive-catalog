@@ -26,6 +26,24 @@
   },
   "versions": [
     {
+      "version": "0.1.4",
+      "date": "2026-11-19",
+      "notes": "Show the cached catalog immediately and preload icons for nearby pages. Decode screenshots when opening an app page.\nReuse unchanged catalog entries and check changed listings in parallel. Keep completed listings available when images fail.\nSimplify refresh progress and keep Done available during a refresh.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.4/primitive-store-0.1.4-armhf.zip",
+          "sha256": "d90ec619cebea0f5eb06f875e04d174c9051aabc5941671e510e499996c58b7d",
+          "size": 3841164
+        }
+      }
+    },
+    {
       "version": "0.1.3",
       "date": "2026-11-19",
       "notes": "Show catalog refresh progress and let Done stop a refresh safely before returning to Launcher.\nReuse the network connection for catalog requests and set a time limit on the refresh.",
