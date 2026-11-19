@@ -32,7 +32,8 @@
           "latest_version": { "type": ["string", "null"] },
           "arch": { "type": "array", "items": { "enum": ["armhf", "armel"] } },
           "updated_at": { "type": "string", "format": "date" },
-          "listing": { "type": "string", "format": "uri" }
+          "listing": { "type": "string", "format": "uri" },
+          "revision": { "type": "string", "pattern": "^[0-9a-f]{64}$", "minLength": 64, "maxLength": 64 }
         }
       }
     }

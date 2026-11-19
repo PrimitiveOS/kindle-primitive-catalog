@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate listings and build the catalog's static API."""
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -97,7 +98,7 @@ def check_listing(folder, validator):
     return listing
 
 
-def card(listing, base):
+def card(folder, listing, base):
     app_id = listing["id"]
     versions = listing["versions"]
     live = [v for v in versions if not v.get("withdrawn")]
@@ -113,7 +114,18 @@ def card(listing, base):
         "arch": sorted({arch for v in live for arch in v.get("assets", {})}),
         "updated_at": max(v["date"] for v in versions),
         "listing": f"{base}/apps/{app_id}.json",
+        "revision": app_revision(folder, listing),
     }
+
+
+def app_revision(folder, listing):
+    # The Kindle caches the listing, icon, and first two screenshots in this order.
+    digest = hashlib.sha256()
+    for path in ["app.json", listing["icon"], *listing.get("screenshots", [])[:2]]:
+        payload = (folder / path).read_bytes()
+        digest.update(len(payload).to_bytes(8, "big"))
+        digest.update(payload)
+    return digest.hexdigest()
 
 
 def collections(path, published_ids):
@@ -172,7 +184,7 @@ def main():
             "schema": 1,
             "generated_at": args.now or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "categories": [{"id": slug, "name": name} for slug, name in CATEGORIES],
-            "apps": [card(listing, args.base_url.rstrip("/")) for _, listing in sources],
+            "apps": [card(folder, listing, args.base_url.rstrip("/")) for folder, listing in sources],
         }
         out = args.out
         validate(out / "index.json", index,
