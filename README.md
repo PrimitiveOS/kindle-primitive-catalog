@@ -29,6 +29,9 @@ archive contents. A scheduled check monitors published asset sizes and hashes.
 
 ## Licence
 
+The first-party software in `scripts/` and the build workflows in `.github/workflows/` use the
+[PolyForm Noncommercial License 1.0.0](LICENSE). The shared JSON schemas use the same software licence.
+
 Doan Nguyen's listings, icons, and grayscale screenshots are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 Each listing names the app's own licence. KOReader's stock icon (`apps/koreader/icon.png`) comes from the KOReader
 project and is under AGPL-3.0.
