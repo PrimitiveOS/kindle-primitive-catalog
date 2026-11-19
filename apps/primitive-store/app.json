@@ -26,6 +26,24 @@
   },
   "versions": [
     {
+      "version": "0.1.2",
+      "date": "2026-11-19",
+      "notes": "Load the catalog on Kindle firmware that keeps the optional signing-policy directory group-writable. A configured signing key still requires a protected path.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.2/primitive-store-0.1.2-armhf.zip",
+          "sha256": "10a8a6d81cb9cdeb876aad4e3d6e435ae0d4d42c575bf7f4721cd64116704a83",
+          "size": 3796558
+        }
+      }
+    },
+    {
       "version": "0.1.1",
       "date": "2026-11-19",
       "notes": "Display the standalone app as Store in the Kindle library and Launcher grid.",
