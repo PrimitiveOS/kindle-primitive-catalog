@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "id": "primitive-launcher",
+  "dir": "launcher",
+  "name": "Primitive Launcher",
+  "subtitle": "Your home screen for the Kindle",
+  "developer": { "name": "Primitive AI", "url": "https://github.com/DoanNguyenTrong" },
+  "categories": ["system"],
+  "description": "Primitive Launcher replaces the Kindle's shop-style home screen with a calm grid of your apps. It has quick settings, Wi-Fi, SSH and DNS, display, sleep, power, USB drive mode and an optional start at boot. Leaving it returns to Amazon's interface.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "screenshots": ["shots/1.png", "shots/2.png"],
+  "changes": {
+    "network": true,
+    "stops_kindle_ui": true,
+    "starts_at_boot": true,
+    "root_filesystem": true,
+    "hooks": false,
+    "notes": "Writes its boot job to /etc/upstart while the root filesystem is writable, only when it changes."
+  },
+  "versions": [
+    {
+      "version": "0.3.21",
+      "date": "2026-11-19",
+      "notes": "Licence: PolyForm Noncommercial for the code, CC BY-NC-SA 4.0 for the docs.",
+      "firmware": { "min": "5.16.3", "max": null },
+      "requires": {},
+      "tested_on": ["KindleOasis3"],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.3.21/primitive-launcher-0.3.21-armhf.zip",
+          "sha256": "2b6dea5f2d0e881a5e8844aaf64ceae2f28ece456ba3919d11efb7ce4c448022",
+          "size": 4612000
+        }
+      }
+    }
+  ]
+}

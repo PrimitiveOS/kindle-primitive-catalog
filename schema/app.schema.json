@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doannguyentrong.github.io/kindle-primitive-catalog/schema/app.schema.json",
+  "title": "Primitive Store listing (apps/<id>/app.json)",
+  "type": "object",
+  "required": ["schema", "id", "name", "subtitle", "developer", "categories", "description", "repo", "licence", "source", "icon", "changes", "versions"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,39}$" },
+    "dir": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,39}$", "not": { "enum": ["documents", "extensions", "system", "koreader", "fonts", "screensaver"] } },
+    "name": { "type": "string", "minLength": 1, "maxLength": 40 },
+    "subtitle": { "type": "string", "minLength": 1, "maxLength": 40 },
+    "developer": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": { "name": { "type": "string", "minLength": 1 }, "url": { "type": "string", "format": "uri" } }
+    },
+    "categories": {
+      "type": "array", "minItems": 1, "maxItems": 2, "uniqueItems": true,
+      "items": { "enum": ["reading", "productivity", "internet", "games", "audio", "creativity", "developer", "utilities", "system"] }
+    },
+    "description": { "type": "string", "minLength": 20, "maxLength": 4000 },
+    "repo": { "type": "string", "format": "uri" },
+    "licence": { "type": "string", "minLength": 1 },
+    "source": { "enum": ["hosted", "upstream", "link"] },
+    "icon": { "type": "string", "pattern": "^icon\\.png$" },
+    "screenshots": { "type": "array", "maxItems": 5, "items": { "type": "string", "pattern": "^shots/[1-5]\\.png$" } },
+    "changes": {
+      "type": "object",
+      "required": ["network", "stops_kindle_ui", "starts_at_boot", "root_filesystem", "hooks"],
+      "additionalProperties": false,
+      "properties": {
+        "network": { "type": "boolean" },
+        "stops_kindle_ui": { "type": "boolean" },
+        "starts_at_boot": { "type": "boolean" },
+        "root_filesystem": { "type": "boolean" },
+        "hooks": { "type": "boolean" },
+        "notes": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "versions": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["version", "date", "notes", "firmware", "tested_on"],
+        "additionalProperties": false,
+        "properties": {
+          "version": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+){1,2}(-p[0-9]+)?$" },
+          "date": { "type": "string", "format": "date" },
+          "notes": { "type": "string", "maxLength": 500 },
+          "firmware": {
+            "type": "object", "required": ["min"], "additionalProperties": false,
+            "properties": { "min": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)+$" }, "max": { "type": ["string", "null"] } }
+          },
+          "requires": {
+            "type": "object", "additionalProperties": { "type": "string", "pattern": "^>=[0-9]+\\.[0-9]+\\.[0-9]+$" }
+          },
+          "tested_on": { "type": "array", "items": { "type": "string" } },
+          "withdrawn": { "type": "string", "minLength": 1 },
+          "assets": {
+            "type": "object", "additionalProperties": false,
+            "properties": {
+              "armhf": { "$ref": "#/$defs/asset" },
+              "armel": { "$ref": "#/$defs/asset" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "source": { "enum": ["hosted", "upstream"] } }, "required": ["source"] },
+      "then": { "properties": { "versions": { "items": { "required": ["assets"] } } } }
+    },
+    {
+      "if": { "properties": { "source": { "const": "link" } }, "required": ["source"] },
+      "then": { "properties": { "versions": { "items": { "not": { "required": ["assets"] } } } } }
+    }
+  ],
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "required": ["url", "sha256", "size"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "size": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

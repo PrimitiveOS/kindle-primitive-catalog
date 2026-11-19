@@ -1,0 +1,4 @@
+# The index is built and published by CI, not kept in git.
+/site/
+.DS_Store
+__pycache__/

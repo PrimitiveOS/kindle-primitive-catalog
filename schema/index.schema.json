@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doannguyentrong.github.io/kindle-primitive-catalog/schema/index.schema.json",
+  "title": "Catalog index (site/v1/index.json)",
+  "type": "object",
+  "required": ["schema", "generated_at", "categories", "apps"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "name"], "additionalProperties": false,
+        "properties": { "id": { "type": "string" }, "name": { "type": "string" } }
+      }
+    },
+    "apps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "subtitle", "categories", "icon", "source", "latest_version", "arch", "updated_at"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "dir": { "type": "string" },
+          "name": { "type": "string" },
+          "subtitle": { "type": "string" },
+          "categories": { "type": "array", "items": { "type": "string" } },
+          "icon": { "type": "string", "format": "uri" },
+          "source": { "enum": ["hosted", "upstream", "link"] },
+          "latest_version": { "type": ["string", "null"] },
+          "arch": { "type": "array", "items": { "enum": ["armhf", "armel"] } },
+          "updated_at": { "type": "string", "format": "date" },
+          "listing": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

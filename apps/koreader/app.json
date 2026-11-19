@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "koreader",
+  "name": "KOReader",
+  "subtitle": "An e-book reader for many formats",
+  "developer": { "name": "KOReader contributors", "url": "https://koreader.rocks/" },
+  "categories": ["reading"],
+  "description": "KOReader is a free e-book and document reader with its own full interface. It opens EPUB, PDF, CBZ and many other formats, and it runs on many e-readers. Primitive Store lists it as a reference: install it from KOReader's own site, and Primitive Launcher shows it on the grid once it is installed.",
+  "repo": "https://github.com/koreader/koreader",
+  "licence": "AGPL-3.0-only",
+  "source": "link",
+  "icon": "icon.png",
+  "screenshots": [],
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": true,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false,
+    "notes": "Not installed by the store. Its own install steps are on koreader.rocks."
+  },
+  "versions": [
+    {
+      "version": "2026.10",
+      "date": "2026-11-19",
+      "notes": "Listed for reference; the store does not download or install it.",
+      "firmware": { "min": "5.16.3", "max": null },
+      "requires": {},
+      "tested_on": ["KindleOasis3"]
+    }
+  ]
+}
