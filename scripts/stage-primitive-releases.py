@@ -129,7 +129,13 @@ def stage_app(staging, review, app_id, version, release_date, checks, index, man
     if candidate["id"] != app_id or candidate["repo"] != canonical_repo or candidate["source"] != "hosted":
         raise ValueError(f"{app_id}: reviewed listing does not match its canonical GitHub repository")
     local_draft = checkout / "app.json"
-    if local_draft.is_file() and index["load"](local_draft)["name"] != candidate["name"]:
+    if app_id == "primitive-store":
+        expected_name = "Store"
+    elif local_draft.is_file():
+        expected_name = index["load"](local_draft)["name"]
+    else:
+        expected_name = None
+    if expected_name is not None and candidate["name"] != expected_name:
         raise ValueError(f"{app_id}: regenerate the review listing and screenshots with the app's current display name")
     previous_folder = staging / "apps" / app_id
     previous = index["load"](previous_folder / "app.json")["versions"] if previous_folder.exists() else []
