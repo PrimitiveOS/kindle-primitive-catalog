@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-starship",
+  "dir": "starship",
+  "name": "Starship",
+  "subtitle": "Dodge fire and defeat the flagship",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Pilot a ship through three short waves and a flagship encounter. Read the next volley, dodge between lanes, and time your shots and shields. Play offline with saved progress and a best score.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-starship",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Pilot a ship through three short waves and a flagship encounter. Read the next volley, dodge between lanes, and time your shots and shields. Play offline with saved progress and a best score.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-starship/releases/download/v0.1.0/primitive-starship-0.1.0-armhf.zip",
+          "sha256": "944e033dd5615eb3fb8733c85af1e35fb1c44f296b9ff9d4ec5122a8baf4a48d",
+          "size": 1472482
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

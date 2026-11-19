@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-switchyard",
+  "dir": "switchyard",
+  "name": "Switchyard",
+  "subtitle": "Set the points and dispatch a train",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Turn the junctions and dispatch the train to its depot. Switchyard includes eight original rail puzzles with a route trace after every dispatch.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-switchyard",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Turn the junctions and dispatch the train to its depot. Switchyard includes eight original rail puzzles with a route trace after every dispatch.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-switchyard/releases/download/v0.1.0/primitive-switchyard-0.1.0-armhf.zip",
+          "sha256": "23c1b795d921e12895b492e1095d9b536df62fb58e5d4b4995527f3d989c5946",
+          "size": 1471151
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

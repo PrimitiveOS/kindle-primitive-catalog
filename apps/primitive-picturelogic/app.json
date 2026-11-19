@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-picturelogic",
+  "dir": "picturelogic",
+  "name": "Picture Logic",
+  "subtitle": "Reveal a picture from number clues",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Read the clues along each row and column, then fill the matching squares to reveal a picture. Play original 5×5 and 10×10 puzzles offline and resume any puzzle where you left off.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-picturelogic",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Read the clues along each row and column, then fill the matching squares to reveal a picture. Play original 5×5 and 10×10 puzzles offline and resume any puzzle where you left off.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-picturelogic/releases/download/v0.1.0/primitive-picturelogic-0.1.0-armhf.zip",
+          "sha256": "e77c6f81b5ef6e84d861fa53061911a3ae09f8b8db6ff9e360024ff1c76d80ce",
+          "size": 1471944
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-tidefork",
+  "dir": "tidefork",
+  "name": "Tidefork",
+  "subtitle": "Merge tiles one line at a time",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Tap an arrow at the edge of the board to slide only that row or column. Equal tiles fuse when they meet. Make the target tile before the puzzle runs out of moves.\n\nReach the target to unlock the next puzzle. Use Undo to take back a move or reset to try a different route.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-tidefork",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Tap an arrow at the edge of the board to slide only that row or column. Equal tiles fuse when they meet. Make the target tile before the puzzle runs out of moves.\n\nReach the target to unlock the next puzzle. Use Undo to take back a move or reset to try a different route.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-tidefork/releases/download/v0.1.0/primitive-tidefork-0.1.0-armhf.zip",
+          "sha256": "a29b67b9e958c4e52a72a2895ef689dc10137033f9c6855a709a691189d0fb57",
+          "size": 1476073
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}
