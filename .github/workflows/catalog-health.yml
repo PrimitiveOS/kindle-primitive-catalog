@@ -1,0 +1,38 @@
+name: catalog health
+on:
+  schedule:
+    - cron: "23 2 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: catalog-health
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check every published asset's size and SHA-256
+        id: assets
+        run: python3 -I scripts/check-assets.py
+      - name: Open an issue when the check fails
+        if: failure() && steps.assets.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Nightly catalog asset verification failed"
+          existing=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$title\" in:title" --json title \
+            --jq '.[].title')
+          if printf '%s\n' "$existing" | grep -Fxq "$title"; then exit 0; fi
+          run="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          printf 'One or more live package assets could not be downloaded or differed from the catalog. See the [asset verification log](%s).\n' "$run" > "$RUNNER_TEMP/issue.md"
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file "$RUNNER_TEMP/issue.md"

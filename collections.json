@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "collections": [
+    {
+      "id": "start-here",
+      "title": "Start here",
+      "description": "Open a web page or find an e-book reader for your Kindle.",
+      "apps": ["primitive-browser", "koreader"]
+    },
+    {
+      "id": "made-by-primitive",
+      "title": "Made by Primitive",
+      "description": "Apps designed for your Kindle's e-ink screen.",
+      "apps": ["primitive-browser"]
+    }
+  ]
+}

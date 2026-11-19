@@ -1,0 +1,41 @@
+name: catalog pull request report
+on:
+  workflow_run:
+    workflows: [catalog]
+    types: [completed]
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  report:
+    if: github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      # Use GitHub metadata only. Fork code and artifacts never run with this write token.
+      - name: Post the catalog check result
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_OWNER: ${{ github.event.workflow_run.head_repository.owner.login }}
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          RESULT: ${{ github.event.workflow_run.conclusion }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          [ -n "$HEAD_OWNER" ] && [ -n "$HEAD_BRANCH" ] || exit 0
+          number=$(gh api --method GET "repos/$GITHUB_REPOSITORY/pulls" \
+            -f state=open -f head="$HEAD_OWNER:$HEAD_BRANCH" -f per_page=100 \
+            | jq -r --arg sha "$HEAD_SHA" '.[] | select(.head.sha == $sha or .merge_commit_sha == $sha) | .number' \
+            | head -n 1)
+          [ -n "$number" ] || exit 0
+          marker='<!-- primitive-catalog-validation -->'
+          body="$RUNNER_TEMP/catalog-report.md"
+          printf '%s\nCatalog validation finished with **%s**. [See the check summary, package sizes, change flags, and hooks](%s).\n' \
+            "$marker" "$RESULT" "$RUN_URL" > "$body"
+          issue="repos/$GITHUB_REPOSITORY/issues/$number"
+          comment=$(gh api --paginate "$issue/comments" | jq -sr --arg marker "$marker" \
+            '[.[][] | select(.user.login == "github-actions[bot]" and (.body | startswith($marker))) | .id] | first // empty')
+          if [ -n "$comment" ]; then
+            gh api --method PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$comment" -f body="$(cat "$body")" >/dev/null
+          else
+            gh pr comment "$number" --repo "$GITHUB_REPOSITORY" --body-file "$body"
+          fi
