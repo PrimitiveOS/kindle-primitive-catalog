@@ -3,7 +3,7 @@
   "id": "primitive-launcher",
   "dir": "launcher",
   "name": "Primitive Launcher",
-  "subtitle": "Your home screen for the Kindle",
+  "subtitle": "Your PrimitiveOS home screen",
   "developer": { "name": "Primitive AI", "url": "https://github.com/DoanNguyenTrong" },
   "categories": ["system"],
   "description": "Primitive Launcher replaces the Kindle's shop-style home screen with a calm grid of your apps. It has quick settings, Wi-Fi, SSH and DNS, display, sleep, power, USB drive mode and an optional start at boot. Leaving it returns to Amazon's interface.",

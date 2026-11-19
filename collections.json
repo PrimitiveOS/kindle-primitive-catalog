@@ -4,7 +4,7 @@
     {
       "id": "start-here",
       "title": "Start here",
-      "description": "Open a web page or find an e-book reader for your Kindle.",
+      "description": "Get to know PrimitiveOS and find apps for reading and browsing.",
       "apps": [
         "primitive-launcher",
         "primitive-store",
@@ -15,7 +15,7 @@
     {
       "id": "made-by-primitive",
       "title": "Made by Primitive",
-      "description": "Apps designed for your Kindle's e-ink screen.",
+      "description": "Apps for PrimitiveOS, designed for your Kindle's e-ink screen.",
       "apps": [
         "primitive-blocks",
         "primitive-browser",

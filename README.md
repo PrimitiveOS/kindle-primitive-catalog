@@ -1,6 +1,6 @@
-# Store catalog
+# PrimitiveOS app catalog
 
-Store reads its public app listings from GitHub Pages. This repository publishes `index.json` for app cards,
+Store reads the public PrimitiveOS app catalog from GitHub Pages. This repository publishes `index.json` for app cards,
 `collections.json` for Today groups, `apps/<id>.json` for individual listings, and the icons and screenshots.
 [Store source](https://github.com/DoanNguyenTrong/kindle-primitive-store)
 
@@ -10,7 +10,7 @@ installs anything.
 ## Add or update an app
 
 Read [docs/store-submit-app.md](https://github.com/DoanNguyenTrong/kindle-primitive/blob/main/docs/store-submit-app.md) in the
-umbrella repo. Add `apps/<id>/app.json`, `icon.png` and `shots/`, run `sh scripts/test.sh`, and open a pull request.
+PrimitiveOS umbrella repo. Add `apps/<id>/app.json`, `icon.png` and `shots/`, run `sh scripts/test.sh`, and open a pull request.
 The catalog tools require Python 3 with `jsonschema` and `Pillow`. CI verifies live package downloads, manifests and
 archive contents. A scheduled check monitors published asset sizes and hashes.
 
@@ -21,7 +21,7 @@ archive contents. A scheduled check monitors published asset sizes and hashes.
 | `apps/<id>/` | A published app: `app.json`, `icon.png`, `shots/`. |
 | `collections.json` | Ordered Today collections and their published app IDs. |
 | `drafts/` | Listings that are not published yet (see `drafts/README.md`). |
-| `schema/` | The JSON schemas, copies of the umbrella repo's (CI checks they match). |
+| `schema/` | Copies of the JSON schemas in the PrimitiveOS umbrella repository. CI checks they match. |
 | `scripts/check-app.sh` | Checks one app: schema, icon and screenshot sizes and colour. |
 | `scripts/check-assets.py` | Checks live asset sizes and hashes. Pass `--deep` to also validate ZIP contents. |
 | `scripts/build-index.py` | Builds `site/v1/` (the index and the listings). |
