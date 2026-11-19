@@ -23,6 +23,7 @@ HOSTS = {
 }
 RESERVED = {"documents", "extensions", "system", "fonts", "screensaver", "koreader"}
 HOOKS = {"hooks/post-install.sh", "hooks/pre-uninstall.sh"}
+MAX_HOOK_BYTES = 64 * 1024
 
 
 def check_url(url):
@@ -134,6 +135,11 @@ def validate_package(source, listing, version, arch, validator):
         hooks = set(manifest.get("hooks", []))
         if hooks != files.intersection(HOOKS) or bool(hooks) != listing["changes"]["hooks"]:
             raise ValueError("ZIP, manifest and listing must agree on hooks")
+        for path in sorted(hooks):
+            with archive.open(f"{top}/{path}") as script:
+                contents = script.read(MAX_HOOK_BYTES + 1)
+            if not 0 < len(contents) <= MAX_HOOK_BYTES or b"\0" in contents:
+                raise ValueError(f"{path}: expected a nonempty shell script of at most {MAX_HOOK_BYTES} bytes")
         installed = files - required - hooks - {"LICENSE-DOCS"}
         if installed != set(manifest["files"]):
             raise ValueError("ZIP contents disagree with the manifest file list")

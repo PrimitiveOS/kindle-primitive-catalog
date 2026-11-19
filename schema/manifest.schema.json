@@ -5,6 +5,13 @@
   "type": "object",
   "required": ["schema", "id", "dir", "version", "arch", "firmware", "files"],
   "additionalProperties": false,
+  "if": {
+    "anyOf": [
+      { "properties": { "id": { "enum": ["primitive-launcher", "primitive-store"] } } },
+      { "properties": { "dir": { "enum": ["launcher", "store"] } } }
+    ]
+  },
+  "then": { "properties": { "hooks": { "maxItems": 0 } } },
   "properties": {
     "schema": { "const": 1 },
     "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,39}$" },
@@ -27,8 +34,8 @@
     "hooks": {
       "type": "array", "uniqueItems": true,
       "items": { "enum": ["hooks/post-install.sh", "hooks/pre-uninstall.sh"] },
-      "if": { "contains": { "const": "hooks/post-install.sh" } },
-      "then": { "contains": { "const": "hooks/pre-uninstall.sh" } }
+      "if": { "minItems": 1 },
+      "then": { "minItems": 2 }
     }
   }
 }
