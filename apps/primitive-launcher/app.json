@@ -30,6 +30,24 @@
   },
   "versions": [
     {
+      "version": "0.4.10",
+      "date": "2026-11-19",
+      "notes": "Keep an uninstalled app's saved grid preferences without showing a missing-app warning. Reinstalling the app restores its preferences.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.4.10/primitive-launcher-0.4.10-armhf.zip",
+          "sha256": "bb4f45325535e6f5f23f471c27720a84b600cbe487d778a819f2294dd2daf72c",
+          "size": 4525406
+        }
+      }
+    },
+    {
       "version": "0.4.9",
       "date": "2026-11-19",
       "notes": "Find and install Store on Kindle firmware where the optional signing key is absent and the signing-policy directory is group-writable.",
