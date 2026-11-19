@@ -2,15 +2,15 @@
   "schema": 1,
   "id": "primitive-tidefork",
   "dir": "tidefork",
-  "name": "Tidefork",
-  "subtitle": "Merge tiles one line at a time",
+  "name": "2048",
+  "subtitle": "Merge tiles and beat your best score",
   "developer": {
     "name": "Primitive AI"
   },
   "categories": [
     "games"
   ],
-  "description": "Tap an arrow at the edge of the board to slide only that row or column. Equal tiles fuse when they meet. Make the target tile before the puzzle runs out of moves.\n\nReach the target to unlock the next puzzle. Use Undo to take back a move or reset to try a different route.",
+  "description": "Swipe to move every tile toward one edge. Matching numbers merge and add to your score. A 2 or 4 appears after each move that changes the board. Keep playing past 2048 and beat your best score before you run out of moves.\n\nYour board and best score save between launches. The original Tidefork challenges and saved progress are available under Line puzzles.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-tidefork",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.2",
+      "date": "2026-11-19",
+      "notes": "Play for a high score until no moves remain. Merging a 2048 tile leaves the round running.\nSave each mode only when its board changes.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-tidefork/releases/download/v0.1.2/primitive-tidefork-0.1.2-armhf.zip",
+          "sha256": "b7bdf7f0dc2596207e1f4c20082d2bbc2cfbbc3bc73f88e9666c8799f75ec6dc",
+          "size": 1487722
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",

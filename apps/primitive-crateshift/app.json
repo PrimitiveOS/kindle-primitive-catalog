@@ -3,14 +3,14 @@
   "id": "primitive-crateshift",
   "dir": "crateshift",
   "name": "Crate Shift",
-  "subtitle": "Push crates onto marked docks",
+  "subtitle": "Original box-pushing puzzles",
   "developer": {
     "name": "Primitive AI"
   },
   "categories": [
     "games"
   ],
-  "description": "Guide a warehouse worker through eight original puzzles. Push each crate onto a marked dock and use Undo when you need to rethink a move. Your puzzle resumes where you left it.",
+  "description": "Swipe or tap to guide a warehouse worker through eight original puzzles. Push each crate onto a marked dock and use Undo when you need to rethink a move. Your puzzle resumes where you left it.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-crateshift",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.2",
+      "date": "2026-11-19",
+      "notes": "Restore the Crate Shift title for the original box-pushing puzzles.\nKeep the dock visible while the worker stands on it.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-crateshift/releases/download/v0.1.2/primitive-crateshift-0.1.2-armhf.zip",
+          "sha256": "c150e0000d97083f1e1ddd1ba9085f8912b6b83d6196e0e970cad5d552899cef",
+          "size": 1484750
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",

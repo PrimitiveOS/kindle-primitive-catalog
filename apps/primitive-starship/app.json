@@ -10,7 +10,7 @@
   "categories": [
     "games"
   ],
-  "description": "Pilot a ship through three short waves and a flagship encounter. Read the next volley, dodge between lanes, and time your shots and shields. Play offline with saved progress and a best score.",
+  "description": "Pilot a ship through three waves and a flagship encounter. Steer with taps or swipes, dodge enemy bolts, and line up your automatic shots. Play offline with saved progress and a best score.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-starship",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-19",
+      "notes": "Added real-time steering, automatic fire, moving fleets, and traveling projectiles with collisions.\nAdded four arcade waves, including a flagship encounter, with a brief break between waves.\nPause flight when the Kindle sleeps or returns from USB drive mode. Save and resume the mission and best score from a separate arcade save.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-starship/releases/download/v0.1.1/primitive-starship-0.1.1-armhf.zip",
+          "sha256": "f6f6005f15d9aab48c238a6a11c5bf04e73c01ef42ce83af9fb8e24d8b9c5a47",
+          "size": 1480049
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",

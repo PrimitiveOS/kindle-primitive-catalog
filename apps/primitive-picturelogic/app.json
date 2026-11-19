@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "primitive-picturelogic",
   "dir": "picturelogic",
-  "name": "Picture Logic",
+  "name": "Nonogram",
   "subtitle": "Reveal a picture from number clues",
   "developer": {
     "name": "Primitive AI"
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-19",
+      "notes": "Use the familiar Nonogram title for the original picture puzzles.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-picturelogic/releases/download/v0.1.1/primitive-picturelogic-0.1.1-armhf.zip",
+          "sha256": "f85a1f095892960a9a7425b175ad5a976ff39bbe2b7837024116fe0606c79b7a",
+          "size": 1471840
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",

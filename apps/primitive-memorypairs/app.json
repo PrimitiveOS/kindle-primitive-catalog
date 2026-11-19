@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "primitive-memorypairs",
   "dir": "memorypairs",
-  "name": "Memory Pairs",
+  "name": "Memory Match",
   "subtitle": "Match symbols in fewer turns",
   "developer": {
     "name": "Primitive AI"
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-19",
+      "notes": "Use the Memory Match title for the matching game.\nMismatched cards turn face down automatically after one second.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-memorypairs/releases/download/v0.1.1/primitive-memorypairs-0.1.1-armhf.zip",
+          "sha256": "d57cc1663916b750d94ea505a85a0c0aa8545a289daac76eb16b343715d5c9bb",
+          "size": 1481373
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",
