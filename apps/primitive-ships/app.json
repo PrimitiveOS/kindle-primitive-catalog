@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-ships",
+  "dir": "ships",
+  "name": "Ships",
+  "subtitle": "A fleet game for one or two",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Place your fleet by hand or shuffle it into position. Find the other ships on an eight-by-eight map, against the Kindle at three levels or with a second player.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-ships",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Place your fleet by hand or shuffle it into position. Find the other ships on an eight-by-eight map, against the Kindle at three levels or with a second player.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-ships/releases/download/v0.1.0/primitive-ships-0.1.0-armhf.zip",
+          "sha256": "5c9c9834611582db3f33ca80e333b6264a236d506b140ddf37f3a481b701df13",
+          "size": 2687923
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

@@ -5,13 +5,37 @@
       "id": "start-here",
       "title": "Start here",
       "description": "Open a web page or find an e-book reader for your Kindle.",
-      "apps": ["primitive-browser", "koreader"]
+      "apps": [
+        "primitive-launcher",
+        "primitive-store",
+        "primitive-browser",
+        "koreader"
+      ]
     },
     {
       "id": "made-by-primitive",
       "title": "Made by Primitive",
       "description": "Apps designed for your Kindle's e-ink screen.",
-      "apps": ["primitive-browser"]
+      "apps": [
+        "primitive-blocks",
+        "primitive-browser",
+        "primitive-calculator",
+        "primitive-cards",
+        "primitive-cascade",
+        "primitive-chess",
+        "primitive-crossword",
+        "primitive-focus",
+        "primitive-hello",
+        "primitive-launcher",
+        "primitive-minesweeper",
+        "primitive-notes",
+        "primitive-ships",
+        "primitive-solitaire",
+        "primitive-store",
+        "primitive-sudoku",
+        "primitive-terminal",
+        "primitive-words"
+      ]
     }
   ]
 }

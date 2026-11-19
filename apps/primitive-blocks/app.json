@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-blocks",
+  "dir": "blocks",
+  "name": "Blocks",
+  "subtitle": "Fit pieces and clear the board",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Place three pieces at a time on a nine-by-nine board. Fill a row, column, or three-by-three box to clear it and beat your best score.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-blocks",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Place three pieces at a time on a nine-by-nine board. Fill a row, column, or three-by-three box to clear it and beat your best score.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-blocks/releases/download/v0.1.0/primitive-blocks-0.1.0-armhf.zip",
+          "sha256": "22d2d415b8b3a70d2b3de95c284462dc493f8e7f6e4dd28350bff95e25c11d2c",
+          "size": 2673431
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

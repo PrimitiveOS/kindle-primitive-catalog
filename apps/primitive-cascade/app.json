@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-cascade",
+  "dir": "cascade",
+  "name": "Cascade",
+  "subtitle": "A falling-piece game for e-ink",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Guide original falling shapes on a narrow board, clear rows and beat your score. Play with the page buttons or touch, and choose from three paces.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-cascade",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Initial release.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-cascade/releases/download/v0.1.0/primitive-cascade-0.1.0-armhf.zip",
+          "sha256": "e32cda123b979069396cab73c2c4b7363d3f496c1304fbc5a0b126b5364aebfa",
+          "size": 2681663
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

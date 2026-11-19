@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "id": "primitive-terminal",
+  "dir": "terminal",
+  "name": "Primitive Terminal",
+  "subtitle": "Run shell commands on Kindle",
+  "developer": {
+    "name": "Primitive AI",
+    "url": "https://github.com/DoanNguyenTrong"
+  },
+  "categories": [
+    "developer"
+  ],
+  "description": "Type a shell command on the on-screen keyboard and read its output. Primitive Terminal opens from the Kindle library and can also run from Primitive Launcher.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-terminal",
+  "licence": "AGPL-3.0-only",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false,
+    "notes": "Runs shell commands you enter."
+  },
+  "versions": [
+    {
+      "version": "0.1.8",
+      "date": "2026-11-19",
+      "notes": "Package the standalone Terminal for ARMHF and ARMEL.\nShip the AGPL software license and the separate documentation license.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-terminal/releases/download/v0.1.8/primitive-terminal-0.1.8-armhf.zip",
+          "sha256": "3f30776b24a6e013c61045e376b60c1cfca069474daaa7a22f0846f41832ab0d",
+          "size": 1822586
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png"
+  ]
+}

@@ -1,8 +1,8 @@
-# Primitive Store catalog
+# Store catalog
 
-The public list of apps for Primitive Store. The store on a Kindle reads the static files published here
-(GitHub Pages): `index.json` (the cards), `collections.json` (the Today groups), `apps/<id>.json` (each listing),
-and the icons and screenshots.
+Store reads its public app listings from GitHub Pages. This repository publishes `index.json` for app cards,
+`collections.json` for Today groups, `apps/<id>.json` for individual listings, and the icons and screenshots.
+[Store source](https://github.com/DoanNguyenTrong/kindle-primitive-store)
 
 No binaries are kept here. A listing points at a release asset, and the store checks its size and SHA-256 before it
 installs anything.
@@ -29,7 +29,6 @@ archive contents. A scheduled check monitors published asset sizes and hashes.
 
 ## Licence
 
-The listings, and our icons and screenshots, are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-Each app's own files are under that app's licence, named in its listing. An app's icon is that app's own artwork, with
-credit to its authors: the KOReader icon (`apps/koreader/icon.png`) is KOReader's stock icon from its repository, under
-AGPL-3.0.
+Doan Nguyen's listings, icons, and grayscale screenshots are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Each listing names the app's own licence. KOReader's stock icon (`apps/koreader/icon.png`) comes from the KOReader
+project and is under AGPL-3.0.

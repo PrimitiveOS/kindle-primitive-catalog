@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "id": "primitive-store",
+  "dir": "store",
+  "name": "Store",
+  "subtitle": "Find apps for your Kindle",
+  "developer": {
+    "name": "Primitive AI",
+    "url": "https://github.com/DoanNguyenTrong"
+  },
+  "categories": [
+    "system"
+  ],
+  "description": "Browse apps, see what they change and install them over Wi-Fi. Use Updates to keep your apps current or remove apps you no longer want.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-store",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": true,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false,
+    "notes": "Checks the catalog and installs or removes app files in user storage."
+  },
+  "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-19",
+      "notes": "Display the standalone app as Store in the Kindle library and Launcher grid.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.1/primitive-store-0.1.1-armhf.zip",
+          "sha256": "8617aea49e6e69e19f54fd3d25e6d2c7d265a6864f838e7b696ac18057ae35ef",
+          "size": 3795513
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

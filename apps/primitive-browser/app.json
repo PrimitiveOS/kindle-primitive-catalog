@@ -30,6 +30,24 @@
   },
   "versions": [
     {
+      "version": "0.2.18",
+      "date": "2026-11-19",
+      "notes": "Package Browser for both ARMHF and ARMEL. The ARMEL build uses a static FBInk helper.\nInclude the software and documentation licenses in both Store package variants.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-browser/releases/download/v0.2.18/primitive-browser-0.2.18-armhf.zip",
+          "sha256": "4689f7f5051dd652be52f4a69f0a76a7ec77ce438719465ae06c1956cdfd0ede",
+          "size": 9511879
+        }
+      }
+    },
+    {
       "version": "0.2.17",
       "date": "2026-11-19",
       "notes": "The first store package. Installs over a Browser installed by USB.",

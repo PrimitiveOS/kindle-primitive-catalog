@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-focus",
+  "dir": "focus",
+  "name": "Focus",
+  "subtitle": "Focus and break timers",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "productivity"
+  ],
+  "description": "Use 25/5 and 50/10 presets or set your own focus and break lengths. Pause, resume or reset the countdown and see how many focus sessions you completed today.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-focus",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Use 25/5 and 50/10 presets or set your own focus and break lengths. Pause, resume or reset the countdown and see how many focus sessions you completed today.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-focus/releases/download/v0.1.0/primitive-focus-0.1.0-armhf.zip",
+          "sha256": "d37760b5cf2057f1b9b298f7b55996938b4f114eff21a1d70f962fecd194c120",
+          "size": 2678685
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

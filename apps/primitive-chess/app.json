@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-chess",
+  "dir": "chess",
+  "name": "Chess",
+  "subtitle": "Play chess against your Kindle",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Play standard chess at three levels, save a game and export PGN.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-chess",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Initial release.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-chess/releases/download/v0.1.0/primitive-chess-0.1.0-armhf.zip",
+          "sha256": "bd8c6234a6af55a52fac4aec8c5721775804d0450ba50febb9847503027cbeb6",
+          "size": 2734565
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

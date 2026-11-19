@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "id": "primitive-launcher",
+  "dir": "launcher",
+  "name": "Primitive Launcher",
+  "subtitle": "Your home screen for the Kindle",
+  "developer": {
+    "name": "Primitive AI",
+    "url": "https://github.com/DoanNguyenTrong"
+  },
+  "categories": [
+    "system"
+  ],
+  "description": "Primitive Launcher replaces the Kindle's shop-style home screen with a calm grid of your apps. It has quick settings, Wi-Fi, SSH and DNS, display, sleep, power, USB drive mode and an optional start at boot. Leaving it returns to Amazon's interface.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ],
+  "changes": {
+    "network": true,
+    "stops_kindle_ui": true,
+    "starts_at_boot": true,
+    "root_filesystem": true,
+    "hooks": false,
+    "notes": "Writes its boot job to /etc/upstart while the root filesystem is writable, only when it changes."
+  },
+  "versions": [
+    {
+      "version": "0.4.7",
+      "date": "2026-11-19",
+      "notes": "Use the approved Store and native app icons in the Launcher grid. Apps can still supply their own icons.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.4.7/primitive-launcher-0.4.7-armhf.zip",
+          "sha256": "044ab3aa367d060cf8024fdf652f7a4c865a89183f87e8d5e70b6bd43d97de0a",
+          "size": 4524558
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-crossword",
+  "dir": "crossword",
+  "name": "Crossword",
+  "subtitle": "Mini crosswords and your puzzles",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Play original mini crosswords or open an unlocked .puz file from your Kindle. Read clues, type answers, check mistakes, and reveal answers one clue at a time.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-crossword",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-19",
+      "notes": "Initial release.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-crossword/releases/download/v0.1.0/primitive-crossword-0.1.0-armhf.zip",
+          "sha256": "468a82a10698a6a504e9cb18a3cb968765e80156f8e8960c3a0d687c074c7ede",
+          "size": 2702886
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}
