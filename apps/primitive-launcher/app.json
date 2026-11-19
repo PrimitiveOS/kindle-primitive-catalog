@@ -30,6 +30,24 @@
   },
   "versions": [
     {
+      "version": "0.4.9",
+      "date": "2026-11-19",
+      "notes": "Find and install Store on Kindle firmware where the optional signing key is absent and the signing-policy directory is group-writable.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.4.9/primitive-launcher-0.4.9-armhf.zip",
+          "sha256": "2e63306c19ddab65e0bb802359d73bdf8c2f1affd4f35bb063dde502bd5e54cc",
+          "size": 4524905
+        }
+      }
+    },
+    {
       "version": "0.4.7",
       "date": "2026-11-19",
       "notes": "Use the approved Store and native app icons in the Launcher grid. Apps can still supply their own icons.",
