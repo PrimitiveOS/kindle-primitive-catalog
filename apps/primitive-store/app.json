@@ -26,6 +26,24 @@
   },
   "versions": [
     {
+      "version": "0.1.3",
+      "date": "2026-11-19",
+      "notes": "Show catalog refresh progress and let Done stop a refresh safely before returning to Launcher.\nReuse the network connection for catalog requests and set a time limit on the refresh.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.3/primitive-store-0.1.3-armhf.zip",
+          "sha256": "b3dfb1d44903886570fe36b49886a8daecefe5c7c3a03286124ee3f872949214",
+          "size": 3802855
+        }
+      }
+    },
+    {
       "version": "0.1.2",
       "date": "2026-11-19",
       "notes": "Load the catalog on Kindle firmware that keeps the optional signing-policy directory group-writable. A configured signing key still requires a protected path.",
