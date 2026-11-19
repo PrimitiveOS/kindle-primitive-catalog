@@ -17,10 +17,13 @@ from datetime import date
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 OWNER = "DoanNguyenTrong"
 ARCH = "armhf"
+SCREENSHOT_SIZE = (632, 840)
+SYSTEM_SCREENSHOTS = {"primitive-browser", "primitive-launcher", "primitive-store"}
 CHECKSUM_BYTES = 4096
 READ_TIMEOUT = 30
 DOWNLOAD_SECONDS = 180
@@ -31,6 +34,13 @@ def release_arg(value):
     if not match:
         raise argparse.ArgumentTypeError("expected an app and release such as primitive-notes=0.1.0")
     return match.groups()
+
+
+def screenshot_arg(value):
+    app_id, equals, path = value.partition("=")
+    if not equals or not re.fullmatch(r"primitive-[a-z0-9-]+", app_id) or not path:
+        raise argparse.ArgumentTypeError("expected an app and PNG path such as primitive-browser=reader.png")
+    return app_id, Path(path)
 
 
 def release_notes(checkout, app_id, version, review, previous):
@@ -91,7 +101,26 @@ def read_release_metadata(archive, top, checkout, max_manifest):
         return json.loads(zipped.read(member))
 
 
-def stage_app(staging, review, app_id, version, release_date, checks, index, manifest_validator, opener):
+def replace_screenshots(folder, listing, captures):
+    shots = folder / "shots"
+    if shots.exists():
+        shutil.rmtree(shots)
+    shots.mkdir()
+    listing["screenshots"] = []
+    width, height = SCREENSHOT_SIZE
+    for number, source in enumerate(captures, 1):
+        destination = f"shots/{number}.png"
+        with Image.open(source, formats=["PNG"]) as image:
+            if image.width * height != image.height * width:
+                raise ValueError(f"{source}: expected the Kindle portrait aspect ratio ({width}×{height})")
+            background = Image.new("RGBA", image.size, "white")
+            background.alpha_composite(image.convert("RGBA"))
+            gray = background.convert("L").resize(SCREENSHOT_SIZE, Image.Resampling.LANCZOS)
+            gray.save(folder / destination, optimize=True)
+        listing["screenshots"].append(destination)
+
+
+def stage_app(staging, review, app_id, version, release_date, checks, index, manifest_validator, opener, captures):
     repository = "app-template" if app_id == "primitive-hello" else app_id.removeprefix("primitive-")
     checkout = ROOT.parent / f"doannt-kindle-{repository}"
     source_folder = review / "apps" / app_id
@@ -129,13 +158,27 @@ def stage_app(staging, review, app_id, version, release_date, checks, index, man
     if previous_folder.exists():
         shutil.rmtree(previous_folder)
     shutil.copytree(source_folder, previous_folder)
+    if captures:
+        replace_screenshots(previous_folder, candidate, captures)
     index["dump"](previous_folder / "app.json", candidate)
     print(f"ok   {app_id} {version} {ARCH} {asset['size']} {asset['sha256']}", flush=True)
 
 
 def stage(args):
-    if len(dict(args.release)) != len(args.release):
+    releases = dict(args.release)
+    if len(releases) != len(args.release):
         raise ValueError("select each app release once")
+    captures_by_app = {}
+    for app_id, capture in args.screenshot:
+        if app_id not in releases:
+            raise ValueError(f"{app_id}: screenshots must accompany a selected release")
+        captures_by_app.setdefault(app_id, []).append(capture.resolve(strict=True))
+    for app_id, captures in captures_by_app.items():
+        if len(captures) != len(set(captures)) or len(captures) > 5:
+            raise ValueError(f"{app_id}: supply one to five distinct screenshots")
+    missing_captures = SYSTEM_SCREENSHOTS.intersection(releases).difference(captures_by_app)
+    if missing_captures:
+        raise ValueError(f"Supply first-party --screenshot files for {', '.join(sorted(missing_captures))}")
     output = args.out.resolve()
     live_apps = ROOT / "apps"
     if output.exists() or output.is_relative_to(live_apps):
@@ -150,8 +193,9 @@ def stage(args):
     with tempfile.TemporaryDirectory(prefix=".primitive-release-", dir=output.parent) as temp:
         staging = Path(temp) / "catalog"
         shutil.copytree(live_apps, staging / "apps")
-        for app_id, version in sorted(args.release):
-            stage_app(staging, review, app_id, version, args.date, checks, index, validator, opener)
+        for app_id, version in sorted(releases.items()):
+            stage_app(staging, review, app_id, version, args.date, checks, index, validator, opener,
+                      captures_by_app.get(app_id, []))
 
         collections = index["load"](ROOT / "collections.json")
         ids = {path.name for path in (staging / "apps").iterdir() if path.is_dir()}
@@ -182,6 +226,8 @@ def main():
     parser.add_argument("--out", type=Path, required=True, help="new output directory, with an existing parent")
     parser.add_argument("--date", type=date.fromisoformat, required=True, help="UTC release date (YYYY-MM-DD)")
     parser.add_argument("--release", type=release_arg, action="append", required=True, help="APP=VERSION, repeat for each release")
+    parser.add_argument("--screenshot", type=screenshot_arg, action="append", default=[],
+                        help="APP=PNG, repeat in display order to replace screenshots from the review")
     args = parser.parse_args()
     try:
         stage(args)
