@@ -4,7 +4,7 @@
     python3 scripts/build-index.py [--out site/v1] [--now 2026-11-19T10:00:00Z]
 
 Writes index.json (the cards and categories), collections.json (if collections.json exists at the top), and apps/<id>.json
-(each full listing, copied after the schema check). Refuses to write anything when a listing fails its schema.
+(each full listing), icons/<id>.png and shots/<id>-<n>.png, copied after the schema check. Refuses to write anything when a listing fails its schema.
 """
 import argparse
 import json
@@ -90,8 +90,15 @@ def main(argv):
     generated = args.now or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     cards = []
+    os.makedirs(os.path.join(out, "icons"))
+    os.makedirs(os.path.join(out, "shots"))
     for folder, listing, src in listings:
-        shutil.copyfile(os.path.join(src, "app.json"), os.path.join(out, "apps", f"{listing['id']}.json"))
+        app_id = listing["id"]
+        shutil.copyfile(os.path.join(src, "app.json"), os.path.join(out, "apps", f"{app_id}.json"))
+        shutil.copyfile(os.path.join(src, listing["icon"]), os.path.join(out, "icons", f"{app_id}.png"))
+        # Screenshots keep their order: shots/<id>-<n>.png, n from 0, as the device names them.
+        for n, shot in enumerate(listing.get("screenshots", [])):
+            shutil.copyfile(os.path.join(src, shot), os.path.join(out, "shots", f"{app_id}-{n}.png"))
         cards.append(card(listing, src))
     index = {
         "schema": 1,
