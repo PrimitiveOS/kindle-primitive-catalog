@@ -3,14 +3,14 @@
   "id": "primitive-cards",
   "dir": "cards",
   "name": "Cards",
-  "subtitle": "Review with spaced repetition",
+  "subtitle": "Flashcards and quick self-tests",
   "developer": {
     "name": "Primitive AI"
   },
   "categories": [
     "productivity"
   ],
-  "description": "Create decks, review text cards and import Anki decks.",
+  "description": "Review due flashcards or try a short self-test, then retry missed cards without changing your review schedule. Create decks in Cards or import Anki and two-column text files from Documents.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-cards",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-20",
+      "notes": "Run a self-test of up to ten cards per deck, resume it later, and retry missed answers without changing scheduled reviews.\nPreview and import UTF-8 text decks from Documents with duplicate skipping.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-cards/releases/download/v0.1.1/primitive-cards-0.1.1-armhf.zip",
+          "sha256": "d28820fc5c6ec47e5d0aff296a7e2b7c3d869c9fbbb2ef614365a1eef3f76fae",
+          "size": 3773704
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",

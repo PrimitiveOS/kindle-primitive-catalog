@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-math-practice",
+  "dir": "math-practice",
+  "name": "Math Practice",
+  "subtitle": "Learn and practise basic math",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "productivity"
+  ],
+  "description": "Start with a worked example and practise arithmetic, fractions, or percentages in five-question sessions. Use a large keypad, check equivalent answers, and retry misses. Your skill history stays on your Kindle.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-math-practice",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-20",
+      "notes": "Initial release of Math Practice for PrimitiveOS.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-math-practice/releases/download/v0.1.0/primitive-math-practice-0.1.0-armhf.zip",
+          "sha256": "8c26c803d0dc0517fd5cef8134937cb328eba8ae1cb37c10c84ca672df226394",
+          "size": 1488258
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

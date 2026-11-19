@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-habits",
+  "dir": "habits",
+  "name": "Habits",
+  "subtitle": "Build a daily or weekly routine",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "productivity"
+  ],
+  "description": "Log each habit with a tap and review your last seven days. Choose a daily or weekly target, correct a check-in, and export your history as CSV. Works offline.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-habits",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-20",
+      "notes": "Initial offline release for your habits and check-ins.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-habits/releases/download/v0.1.0/primitive-habits-0.1.0-armhf.zip",
+          "sha256": "17df79d371b2b37448b3f529dc134cbb530bc5285d562ff35f22bafd302dafbd",
+          "size": 1529647
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

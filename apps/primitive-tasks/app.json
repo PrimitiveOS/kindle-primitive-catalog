@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "id": "primitive-tasks",
+  "dir": "tasks",
+  "name": "Tasks",
+  "subtitle": "Plan your day on Kindle",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "productivity"
+  ],
+  "description": "Add tasks, organize them into lists, and check off what you finish. Today and Upcoming sort tasks by their due dates. Set a daily, weekday, or weekly repeat and undo the last completion. Works offline.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-tasks",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-20",
+      "notes": "Initial offline release for your daily tasks and lists.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-tasks/releases/download/v0.1.0/primitive-tasks-0.1.0-armhf.zip",
+          "sha256": "77a6e16e5cff2e74083412d6a0fbf134656097b9211d466f69692d8e2a25d7f1",
+          "size": 1541515
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}

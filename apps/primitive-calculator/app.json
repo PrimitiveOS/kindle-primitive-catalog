@@ -10,7 +10,7 @@
   "categories": [
     "utilities"
   ],
-  "description": "Use large keys for addition, subtraction, multiplication and division. Browse calculation history and copy the current result to a text file.",
+  "description": "Use large keys for addition, subtraction, multiplication and division. Browse calculation history and copy the current result to a text file.\n\nOpen Tools to convert common units, see steps for simplifying fractions or solving linear equations, and plot lines or quadratics with a table of values.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-calculator",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.3",
+      "date": "2026-11-20",
+      "notes": "Mark rounded conversions with a Kindle-compatible approximation symbol.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-calculator/releases/download/v0.1.3/primitive-calculator-0.1.3-armhf.zip",
+          "sha256": "e68a740ce4ad71247779e30d3e8d92e357b0fd19c9fe8c2acf84eb0e5f6b5e62",
+          "size": 2763524
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",

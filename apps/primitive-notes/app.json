@@ -3,14 +3,14 @@
   "id": "primitive-notes",
   "dir": "notes",
   "name": "Notes",
-  "subtitle": "Write and find plain-text notes",
+  "subtitle": "Plain-text notes and checklists",
   "developer": {
     "name": "Primitive AI"
   },
   "categories": [
     "productivity"
   ],
-  "description": "Write, pin and search notes stored as plain text on your Kindle.",
+  "description": "Write, pin, and search plain-text notes. Check items off and reorder them in Checklist view, or start a reading journal from Templates. Your notes stay as UTF-8 text files.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-notes",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -23,6 +23,24 @@
     "hooks": false
   },
   "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-20",
+      "notes": "Check off and reorder items in plain-text checklists.\nStart a checklist or reading journal from Templates.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-notes/releases/download/v0.1.1/primitive-notes-0.1.1-armhf.zip",
+          "sha256": "357da3fea575d28427c49be0773fdf27217b0e2e62e298f3a8ceaa3c07302b22",
+          "size": 2681560
+        }
+      }
+    },
     {
       "version": "0.1.0",
       "date": "2026-11-19",

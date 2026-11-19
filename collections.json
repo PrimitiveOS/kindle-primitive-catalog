@@ -17,6 +17,7 @@
       "title": "Made by Primitive",
       "description": "Apps for PrimitiveOS, designed for your Kindle's e-ink screen.",
       "apps": [
+        "primitive-agenda",
         "primitive-blocks",
         "primitive-browser",
         "primitive-calculator",
@@ -25,13 +26,18 @@
         "primitive-chess",
         "primitive-crateshift",
         "primitive-crossword",
+        "primitive-dictionary",
         "primitive-focus",
+        "primitive-habits",
         "primitive-hello",
+        "primitive-language-practice",
         "primitive-launcher",
+        "primitive-math-practice",
         "primitive-memorypairs",
         "primitive-minesweeper",
         "primitive-notes",
         "primitive-picturelogic",
+        "primitive-reading-practice",
         "primitive-ships",
         "primitive-snake",
         "primitive-solitaire",
@@ -39,9 +45,29 @@
         "primitive-store",
         "primitive-sudoku",
         "primitive-switchyard",
+        "primitive-tasks",
         "primitive-terminal",
         "primitive-tidefork",
         "primitive-words"
+      ]
+    },
+    {
+      "id": "study-and-work",
+      "title": "Study and work",
+      "description": "Practice a skill, plan your day, and keep study material on Kindle.",
+      "apps": [
+        "primitive-reading-practice",
+        "primitive-math-practice",
+        "primitive-language-practice",
+        "primitive-cards",
+        "primitive-dictionary",
+        "primitive-tasks",
+        "primitive-notes",
+        "primitive-focus",
+        "primitive-habits",
+        "primitive-agenda",
+        "primitive-calculator",
+        "primitive-browser"
       ]
     }
   ]
