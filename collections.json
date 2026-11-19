@@ -33,6 +33,7 @@
         "primitive-notes",
         "primitive-picturelogic",
         "primitive-ships",
+        "primitive-snake",
         "primitive-solitaire",
         "primitive-starship",
         "primitive-store",
