@@ -25,5 +25,7 @@ umbrella repo. In short: add `apps/<id>/app.json`, `icon.png` and `shots/`, run 
 
 ## Licence
 
-The listings, icons and screenshots are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-Each app's own files are under that app's licence, named in its listing.
+The listings, and our icons and screenshots, are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Each app's own files are under that app's licence, named in its listing. An app's icon is that app's own artwork, with
+credit to its authors: the KOReader icon (`apps/koreader/icon.png`) is KOReader's stock icon from its repository, under
+AGPL-3.0.
