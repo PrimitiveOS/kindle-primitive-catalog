@@ -26,6 +26,24 @@
   },
   "versions": [
     {
+      "version": "0.1.7",
+      "date": "2026-11-20",
+      "notes": "Refresh from the PrimitiveOS organization’s Store catalog.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.7/primitive-store-0.1.7-armhf.zip",
+          "sha256": "ac9e1b99bdef76eaa403343ae60c45ec53cb7cfb94aaeead3b3f20b3a0527d6f",
+          "size": 3880342
+        }
+      }
+    },
+    {
       "version": "0.1.6",
       "date": "2026-11-20",
       "notes": "Swipe through app lists and return to the same spot after opening an app. Preload icons near the visible rows.\nSee GitHub package downloads on app pages using the saved catalog.\nOpen installed apps from Launcher Settings. Low power mode defers automatic checks and keeps manual Refresh available.",

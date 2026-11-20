@@ -30,6 +30,24 @@
   },
   "versions": [
     {
+      "version": "0.5.4",
+      "date": "2026-11-20",
+      "notes": "Use the PrimitiveOS organization’s Store catalog for bootstrap and update checks.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.5.4/primitive-launcher-0.5.4-armhf.zip",
+          "sha256": "fa2d3d952be76dc2d74618c5fe8c39ec03438cacf4b873c103e8cb064a136e20",
+          "size": 4584022
+        }
+      }
+    },
+    {
       "version": "0.5.3",
       "date": "2026-11-20",
       "notes": "Choose separate PNGs under Display › Wallpaper for Home, Sleep, and automatic Launcher startup.\nSwipe through Settings and App visibility, and return to the same spot with Back.\nSee battery history, adjust display and accessibility controls, manage apps and storage, and sync the clock over Wi-Fi.",
