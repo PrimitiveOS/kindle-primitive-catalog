@@ -16,17 +16,29 @@ archive contents. A scheduled check monitors published asset sizes and hashes.
 
 ## App downloads
 
-[App download counts](https://github.com/DoanNguyenTrong/kindle-primitive-catalog/actions/workflows/download-counts.yml)
-runs daily and on demand. Each run shows the latest per-app totals and saves a JSON and CSV snapshot in the
-`app-download-counts` artifact. The report uses GitHub's public release metadata and needs no Kindle telemetry.
-[GitHub release counters](https://docs.github.com/en/rest/releases/releases?apiVersion=2026-03-10#list-releases)
+The Catalog workflow updates download counts daily and on each publication. Its run summary shows the latest per-app
+totals, and the `app-download-counts` artifact includes JSON, CSV, and Markdown.
+[Catalog workflow](https://github.com/DoanNguyenTrong/kindle-primitive-catalog/actions/workflows/catalog.yml)
+
+Run the manual report workflow to collect a snapshot on demand.
+[Manual report workflow](https://github.com/DoanNguyenTrong/kindle-primitive-catalog/actions/workflows/download-counts.yml)
+
+Store reads available counts from the optional `downloads` field in `index.json` during its regular catalog
+refresh. The snapshot includes `as_of`, the collection time, and `by_app`, a map keyed by app ID. If fresh counts
+are incomplete, publication keeps the previous snapshot when available. Otherwise, the index carries whichever
+totals GitHub provided. The report uses GitHub's public release metadata. [GitHub release counters](https://docs.github.com/en/rest/releases/releases?apiVersion=2026-03-10#list-releases)
 
 Totals include GitHub downloads of package ZIPs across releases and architectures, including manual-install ZIPs,
 updates, repeat downloads, and automated checks. They measure package downloads across all channels. A linked
 third-party app such as KOReader is outside the report. If GitHub cannot supply a count, the report marks the app
 unavailable and flags the run. Removing a release asset removes that asset's counter from future snapshots.
 
-To create a snapshot locally, run `python3 -I scripts/download-counts.py --out /tmp/primitive-download-counts`.
+These commands create a snapshot and a local catalog.
+
+```sh
+python3 -I scripts/download-counts.py --out /tmp/primitive-download-counts
+python3 -I scripts/build-index.py --download-counts /tmp/primitive-download-counts/download-counts.json
+```
 
 ## Layout
 

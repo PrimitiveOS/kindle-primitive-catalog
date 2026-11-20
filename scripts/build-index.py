@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import shutil
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -155,12 +156,53 @@ def collections(path, published_ids):
     return data
 
 
+def validate_download_snapshot(path, snapshot, validator):
+    validate(path, snapshot, validator)
+    # JSON Schema accepts an integer-valued float. The Kindle expects an integer token.
+    if any(type(count) is not int for count in snapshot["by_app"].values()):
+        raise ValueError(f"{path}: download counts must use integer tokens")
+
+
+def download_snapshot(report_path, previous_index, hosted_ids, validator):
+    fresh = None
+    if report_path and report_path.is_file():
+        try:
+            report = load(report_path)
+            if report["schema"] != 1 or report["source"] != "github_release_asset_download_count":
+                raise ValueError("unsupported download report")
+            rows = {row["id"]: row["downloads"] for row in report["apps"] if row["id"] in hosted_ids}
+            counted = {app_id: count for app_id, count in rows.items() if count is not None}
+            if counted:
+                snapshot = {"as_of": report["generated_at"], "by_app": counted}
+                validate_download_snapshot(report_path, snapshot, validator)
+                fresh = snapshot
+                if len(counted) == len(rows):
+                    return fresh
+        except (KeyError, OSError, TypeError, ValueError) as error:
+            print(f"unable to use download report: {error}", file=sys.stderr)
+
+    if previous_index and previous_index.is_file():
+        try:
+            previous = load(previous_index).get("downloads")
+            if previous is not None:
+                validate_download_snapshot(previous_index, previous, validator)
+                by_app = {app_id: count for app_id, count in previous["by_app"].items() if app_id in hosted_ids}
+                if by_app:
+                    return {"as_of": previous["as_of"], "by_app": by_app}
+        except (AttributeError, KeyError, OSError, TypeError, ValueError) as error:
+            print(f"unable to use previous download counts: {error}", file=sys.stderr)
+
+    return fresh
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=ROOT / "site" / "v1")
     parser.add_argument("--now", help="generated_at time (default: now, UTC)")
     parser.add_argument("--base-url", default=PUBLIC_BASE, help="catalog URL written into each card")
     parser.add_argument("--check-app", type=Path, help="validate one app folder without building the site")
+    parser.add_argument("--download-counts", type=Path, help="JSON snapshot from download-counts.py")
+    parser.add_argument("--previous-index", type=Path, help="published index used if download counts are incomplete")
     args = parser.parse_args()
     formats = FormatChecker()
     validator = Draft202012Validator(load(ROOT / "schema" / "app.schema.json"), format_checker=formats)
@@ -187,8 +229,14 @@ def main():
             "apps": [card(folder, listing, args.base_url.rstrip("/")) for folder, listing in sources],
         }
         out = args.out
-        validate(out / "index.json", index,
-                 Draft202012Validator(load(ROOT / "schema" / "index.schema.json"), format_checker=formats))
+        index_schema = load(ROOT / "schema" / "index.schema.json")
+        index_validator = Draft202012Validator(index_schema, format_checker=formats)
+        hosted_ids = {listing["id"] for _, listing in sources if listing["source"] == "hosted"}
+        download_validator = index_validator.evolve(schema=index_schema["properties"]["downloads"])
+        snapshot = download_snapshot(args.download_counts, args.previous_index, hosted_ids, download_validator)
+        if snapshot is not None:
+            index["downloads"] = snapshot
+        validate(out / "index.json", index, index_validator)
         expected = {"apps", "icons", "shots", "index.json", "collections.json"}
         if out.is_dir():
             if out.is_symlink() or any(path.name not in expected for path in out.iterdir()):

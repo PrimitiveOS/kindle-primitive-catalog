@@ -3,9 +3,14 @@ on:
   pull_request:
   push:
     branches: [main]
+  schedule:
+    - cron: "53 2 * * *"
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: catalog-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -17,22 +22,72 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 -m pip install jsonschema==4.26.0 'Pillow>=12,<14'
+      - name: Read the published index
+        if: github.ref == 'refs/heads/main'
+        run: |
+          previous="$RUNNER_TEMP/published-index.json"
+          if ! curl --fail --silent --show-error --max-time 15 --max-filesize 102400 \
+            https://doannguyentrong.github.io/kindle-primitive-catalog/v1/index.json -o "$previous"; then
+            rm -f "$previous"
+          fi
+      - name: Collect GitHub release asset counts
+        if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if ! timeout 8m python3 -I scripts/download-counts.py --out "$RUNNER_TEMP/download-counts"; then
+            echo '::warning::Some download counts are unavailable. Keep the published snapshot when available.'
+          fi
+          report="$RUNNER_TEMP/download-counts/download-counts.md"
+          if [ -f "$report" ]; then
+            cat "$report" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          name: app-download-counts
+          path: ${{ runner.temp }}/download-counts/
+          if-no-files-found: ignore
       - name: Test the catalog and build the site
         run: |
           sh scripts/test.sh
-          python3 -I scripts/build-index.py
+          python3 -I scripts/build-index.py \
+            --download-counts "$RUNNER_TEMP/download-counts/download-counts.json" \
+            --previous-index "$RUNNER_TEMP/published-index.json"
       - name: Check that the schema folder matches the umbrella repo
         run: |
           git clone --depth 1 https://github.com/DoanNguyenTrong/kindle-primitive.git "$RUNNER_TEMP/umbrella"
           for f in app manifest index; do cmp "schema/$f.schema.json" "$RUNNER_TEMP/umbrella/schema/$f.schema.json"; done
       - name: Verify live assets, manifests and archive contents
-        run: python3 -I scripts/check-assets.py --deep
+        run: |
+          # A scheduled counts refresh skips the ZIP downloads only when the app cards and their
+          # listing revisions still match the published index.
+          previous="$RUNNER_TEMP/published-index.json"
+          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ -s "$previous" ]; then
+            if python3 -I - "$previous" site/v1/index.json <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          try:
+              old, new = [json.loads(Path(name).read_bytes()) for name in sys.argv[1:]]
+              unchanged = old["schema"] == new["schema"] and old["apps"] == new["apps"]
+          except (OSError, KeyError, TypeError, ValueError):
+              unchanged = False
+          sys.exit(0 if unchanged else 1)
+          PY
+            then
+              echo 'The scheduled refresh left the published app cards and revisions unchanged.'
+              exit 0
+            fi
+          fi
+          python3 -I scripts/check-assets.py --deep
       - uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
           path: site
   pages:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: check
     runs-on: ubuntu-latest
     permissions:

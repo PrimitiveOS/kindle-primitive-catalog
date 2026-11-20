@@ -36,3 +36,54 @@ for card in index["apps"]:
 assert collections == json.loads(Path("collections.json").read_text())
 print("ok   static catalog API")
 PY
+python3 -I - "$TMP" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+root = Path(sys.argv[1])
+report = {
+    "schema": 1, "source": "github_release_asset_download_count", "generated_at": "2026-11-19T09:00:00Z",
+    "apps": [
+        {"id": "primitive-notes", "downloads": 0},
+        {"id": "primitive-snake", "downloads": 13},
+        {"id": "old-app", "downloads": 18},
+        {"id": "koreader", "downloads": 25},
+    ],
+}
+(root / "report.json").write_text(json.dumps(report))
+report["apps"][0]["downloads"] = None
+report["apps"][1]["downloads"] = 21
+report["generated_at"] = "2026-11-19T09:30:00Z"
+(root / "partial.json").write_text(json.dumps(report))
+report["apps"][1]["downloads"] = -1
+(root / "invalid.json").write_text(json.dumps(report))
+PY
+build_counts() {
+    python3 -I scripts/build-index.py --base-url https://catalog.example/v1 \
+        --now 2026-11-19T10:00:00Z --out "$TMP/$1" --download-counts "$TMP/$2.json" \
+        --previous-index "$TMP/counted/index.json"
+}
+build_counts counted report
+build_counts fallback partial
+build_counts invalid invalid
+python3 -I scripts/build-index.py --out "$TMP/partial" --download-counts "$TMP/partial.json"
+python3 -I - "$TMP" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+def index(name):
+    return json.loads((Path(sys.argv[1]) / name / "index.json").read_text())
+
+baseline, counted, fallback, invalid, partial = map(index, ("v1", "counted", "fallback", "invalid", "partial"))
+assert "downloads" not in baseline
+assert counted["downloads"] == {
+    "as_of": "2026-11-19T09:00:00Z",
+    "by_app": {"primitive-notes": 0, "primitive-snake": 13},
+}
+assert baseline["apps"] == counted["apps"] == fallback["apps"] == invalid["apps"]
+assert fallback["downloads"] == invalid["downloads"] == counted["downloads"]
+assert partial["downloads"] == {"as_of": "2026-11-19T09:30:00Z", "by_app": {"primitive-snake": 21}}
+print("ok   optional download counts and previous snapshot fallback")
+PY
