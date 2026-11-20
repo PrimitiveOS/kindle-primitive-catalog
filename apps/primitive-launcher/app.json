@@ -11,7 +11,7 @@
   "categories": [
     "system"
   ],
-  "description": "Primitive Launcher replaces the Kindle's shop-style home screen with a calm grid of your apps. It has quick settings, Wi-Fi, SSH and DNS, display, sleep, power, USB drive mode and an optional start at boot. Leaving it returns to Amazon's interface.",
+  "description": "Open your app grid, choose a wallpaper, and manage battery, display, apps, Wi-Fi, storage, and time from a scrolling Settings list. Use the Kindle UI tile to return to Amazon’s interface.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -29,6 +29,24 @@
     "notes": "Writes its boot job to /etc/upstart while the root filesystem is writable, only when it changes."
   },
   "versions": [
+    {
+      "version": "0.5.3",
+      "date": "2026-11-20",
+      "notes": "Choose separate PNGs under Display › Wallpaper for Home, Sleep, and automatic Launcher startup.\nSwipe through Settings and App visibility, and return to the same spot with Back.\nSee battery history, adjust display and accessibility controls, manage apps and storage, and sync the clock over Wi-Fi.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.5.3/primitive-launcher-0.5.3-armhf.zip",
+          "sha256": "96059bdb10f7c80e370801bc26fb354e704d84a06a6892588ff0ad7bebc91920",
+          "size": 4583931
+        }
+      }
+    },
     {
       "version": "0.4.10",
       "date": "2026-11-19",

@@ -11,7 +11,7 @@
   "categories": [
     "system"
   ],
-  "description": "Browse apps, see what they change and install them over Wi-Fi. Use Updates to keep your apps current or remove apps you no longer want.",
+  "description": "Browse and install apps over Wi-Fi. Swipe through lists, check GitHub package download totals on app pages, and use Updates to manage installed apps.",
   "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-store",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -25,6 +25,24 @@
     "notes": "Checks the catalog and installs or removes app files in user storage."
   },
   "versions": [
+    {
+      "version": "0.1.6",
+      "date": "2026-11-20",
+      "notes": "Swipe through app lists and return to the same spot after opening an app. Preload icons near the visible rows.\nSee GitHub package downloads on app pages using the saved catalog.\nOpen installed apps from Launcher Settings. Low power mode defers automatic checks and keeps manual Refresh available.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.6/primitive-store-0.1.6-armhf.zip",
+          "sha256": "6acae2f5dd2c3824abb218624f0d5a993d8a5a74d02c2467d65a5191cc7ab3fe",
+          "size": 3880668
+        }
+      }
+    },
     {
       "version": "0.1.4",
       "date": "2026-11-19",
