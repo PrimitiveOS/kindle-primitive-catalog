@@ -120,19 +120,39 @@ def replace_screenshots(folder, listing, captures):
         listing["screenshots"].append(destination)
 
 
+def repository_for(app_id, load):
+    """A published listing can rename its repository while keeping its package ID."""
+    published = ROOT / "apps" / app_id / "app.json"
+    legacy = "app-template" if app_id == "primitive-hello" else app_id.removeprefix("primitive-")
+    repo = f"https://github.com/{OWNER}/kindle-primitive-{legacy}"
+    if published.is_file():
+        listing = load(published)
+        if listing["id"] != app_id or listing["source"] != "hosted":
+            raise ValueError(f"{app_id}: expected a first-party hosted listing")
+        repo = listing["repo"]
+    match = re.fullmatch(rf"https://github\.com/{OWNER}/kindle-primitive-([a-z0-9]+(?:-[a-z0-9]+)*)", repo)
+    if not match:
+        raise ValueError(f"{app_id}: expected a canonical PrimitiveOS repository URL")
+    checkout = ROOT.parent / f"doannt-kindle-{match[1]}"
+    if not checkout.is_dir() and match[1] != legacy:
+        checkout = ROOT.parent / f"doannt-kindle-{legacy}"
+    return repo, checkout
+
+
 def stage_app(staging, review, app_id, version, release_date, checks, index, manifest_validator, opener, captures):
-    repository = "app-template" if app_id == "primitive-hello" else app_id.removeprefix("primitive-")
-    checkout = ROOT.parent / f"doannt-kindle-{repository}"
+    canonical_repo, checkout = repository_for(app_id, index["load"])
     source_folder = review / "apps" / app_id
     candidate = index["load"](source_folder / "app.json")
-    canonical_repo = f"https://github.com/{OWNER}/kindle-primitive-{repository}"
     if candidate["id"] != app_id or candidate["repo"] != canonical_repo or candidate["source"] != "hosted":
         raise ValueError(f"{app_id}: reviewed listing does not match its canonical GitHub repository")
     local_draft = checkout / "app.json"
     if app_id == "primitive-store":
         expected_name = "Store"
     elif local_draft.is_file():
-        expected_name = index["load"](local_draft)["name"]
+        draft = index["load"](local_draft)
+        if draft["id"] != app_id:
+            raise ValueError(f"{app_id}: local app.json is for a different app")
+        expected_name = draft["name"]
     else:
         expected_name = None
     if expected_name is not None and candidate["name"] != expected_name:

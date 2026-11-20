@@ -1,0 +1,47 @@
+name: App download counts
+
+on:
+  schedule:
+    - cron: "53 2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/download-counts.yml'
+      - 'scripts/download-counts.py'
+      - 'apps/**/app.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: app-download-counts
+
+jobs:
+  report:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect GitHub release asset counts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -I scripts/download-counts.py --out "$RUNNER_TEMP/download-counts"
+      - name: Show per-app counts
+        if: ${{ !cancelled() }}
+        run: |
+          report="$RUNNER_TEMP/download-counts/download-counts.md"
+          if [ -f "$report" ]; then
+            cat "$report" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: app-download-counts
+          path: ${{ runner.temp }}/download-counts/

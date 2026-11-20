@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Swipe or tap to guide a warehouse worker through eight original puzzles. Push each crate onto a marked dock and use Undo when you need to rethink a move. Your puzzle resumes where you left it.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-crateshift",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-crate-shift",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-crateshift/releases/download/v0.1.2/primitive-crateshift-0.1.2-armhf.zip",
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-crate-shift/releases/download/v0.1.2/primitive-crateshift-0.1.2-armhf.zip",
           "sha256": "c150e0000d97083f1e1ddd1ba9085f8912b6b83d6196e0e970cad5d552899cef",
           "size": 1484750
         }
@@ -53,7 +53,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-crateshift/releases/download/v0.1.0/primitive-crateshift-0.1.0-armhf.zip",
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-crate-shift/releases/download/v0.1.0/primitive-crateshift-0.1.0-armhf.zip",
           "sha256": "3314e7eb783b20deb6d136d8534192a89f268b2b9d10cbeeffe6d68170edde1f",
           "size": 1484299
         }

@@ -14,6 +14,20 @@ PrimitiveOS umbrella repo. Add `apps/<id>/app.json`, `icon.png` and `shots/`, ru
 The catalog tools require Python 3 with `jsonschema` and `Pillow`. CI verifies live package downloads, manifests and
 archive contents. A scheduled check monitors published asset sizes and hashes.
 
+## App downloads
+
+[App download counts](https://github.com/DoanNguyenTrong/kindle-primitive-catalog/actions/workflows/download-counts.yml)
+runs daily and on demand. Each run shows the latest per-app totals and saves a JSON and CSV snapshot in the
+`app-download-counts` artifact. The report uses GitHub's public release metadata and needs no Kindle telemetry.
+[GitHub release counters](https://docs.github.com/en/rest/releases/releases?apiVersion=2026-03-10#list-releases)
+
+Totals include GitHub downloads of package ZIPs across releases and architectures, including manual-install ZIPs,
+updates, repeat downloads, and automated checks. They measure package downloads across all channels. A linked
+third-party app such as KOReader is outside the report. If GitHub cannot supply a count, the report marks the app
+unavailable and flags the run. Removing a release asset removes that asset's counter from future snapshots.
+
+To create a snapshot locally, run `python3 -I scripts/download-counts.py --out /tmp/primitive-download-counts`.
+
 ## Layout
 
 | Path | What |
@@ -24,6 +38,7 @@ archive contents. A scheduled check monitors published asset sizes and hashes.
 | `schema/` | Copies of the JSON schemas in the PrimitiveOS umbrella repository. CI checks they match. |
 | `scripts/check-app.sh` | Checks one app: schema, icon and screenshot sizes and colour. |
 | `scripts/check-assets.py` | Checks live asset sizes and hashes. Pass `--deep` to also validate ZIP contents. |
+| `scripts/download-counts.py` | Summarizes GitHub's download counters for first-party package assets. |
 | `scripts/build-index.py` | Builds `site/v1/` (the index and the listings). |
 | `scripts/test.sh` | What CI runs before anything is published. |
 
