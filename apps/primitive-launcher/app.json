@@ -11,14 +11,15 @@
   "categories": [
     "system"
   ],
-  "description": "Open your app grid and preview separate Home, Sleep, and Startup wallpapers before applying them. Set opacity for each screen. Manage battery, display, apps, Wi-Fi, storage, and time from a scrolling Settings list. Use the Kindle UI tile to return to Amazon’s interface.",
+  "description": "Open your app grid and preview separate Home, Sleep, and Startup wallpapers before applying them. Manage battery, display, Wi-Fi, storage, and time from Settings. View installed app versions and uninstall apps offline from Settings › Apps. Use the Kindle UI tile to return to Amazon’s interface.",
   "repo": "https://github.com/PrimitiveOS/kindle-primitive-launcher",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
   "screenshots": [
     "shots/1.png",
-    "shots/2.png"
+    "shots/2.png",
+    "shots/3.png"
   ],
   "changes": {
     "network": true,
@@ -29,6 +30,24 @@
     "notes": "Writes its boot job to /etc/upstart while the root filesystem is writable, only when it changes."
   },
   "versions": [
+    {
+      "version": "0.5.9",
+      "date": "2026-11-20",
+      "notes": "See app versions and uninstall installed packages from Settings › Apps › Installed apps. The list works offline and Home refreshes after removal.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.5.9/primitive-launcher-0.5.9-armhf.zip",
+          "sha256": "cfd83ecb4dbfa43374a705737b69dd0b2a2ab1370b0f2bd81814580e4e9f9e41",
+          "size": 4621425
+        }
+      }
+    },
     {
       "version": "0.5.5",
       "date": "2026-11-20",
