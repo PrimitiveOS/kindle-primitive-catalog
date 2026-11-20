@@ -10,7 +10,7 @@
   "categories": [
     "utilities"
   ],
-  "description": "Browse Documents and other supported user folders. Search by filename, create folders, rename, copy or move entries, and remove files and empty folders. Open PDFs, JPEGs, and PNGs in an installed Viewer, and supported books and PDFs in KOReader.",
+  "description": "Browse Documents and other supported user folders. Search by filename, create folders, rename, copy or move entries, and remove files and empty folders. Open supported documents in an installed Reader, Viewer, or KOReader.",
   "repo": "https://github.com/PrimitiveOS/kindle-primitive-files",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -24,6 +24,26 @@
     "notes": "Changes user files when you create, rename, copy, move or delete them."
   },
   "versions": [
+    {
+      "version": "0.1.2",
+      "date": "2026-11-20",
+      "notes": "Open supported documents in Reader, Viewer, or KOReader.\nTested on Kindle Oasis 3 with firmware 5.18.2.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-files/releases/download/v0.1.2/primitive-files-0.1.2-armhf.zip",
+          "sha256": "9d86f0bfe08196a77ad0bf9dbcb5a4d9d7fe256ab9e5372560db460e99ffa0d2",
+          "size": 1513847
+        }
+      }
+    },
     {
       "version": "0.1.1",
       "date": "2026-11-20",

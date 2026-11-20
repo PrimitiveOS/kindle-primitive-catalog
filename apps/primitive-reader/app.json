@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "id": "primitive-reader",
+  "dir": "reader",
+  "name": "Reader",
+  "subtitle": "Read books and documents offline",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "reading"
+  ],
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-reader",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "description": "Read books, PDFs, comics and documents offline with page turns or scrolling. Keep bookmarks, highlights and notes, look up words in local dictionaries, and recognize text on scans.\n\nOpen Reader from Launcher or choose Open in Reader in Files.",
+  "source": "hosted",
+  "icon": "icon.png",
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png",
+    "shots/3.png"
+  ],
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false,
+    "notes": "Saves reading progress, annotations and preferences in Reader’s data folder."
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-20",
+      "notes": "Offline reading with generated EPUB contents, comic panel zoom, navigation, annotations and scanned document tools.\nTested on Kindle Oasis 3 with firmware 5.18.2.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.0/primitive-reader-0.1.0-armhf.zip",
+          "sha256": "39cb0de3da2bd53a0d35fe4ce093ad1b561f26f5797fae83ea8c6198e586b9ff",
+          "size": 16877879
+        }
+      }
+    }
+  ]
+}
