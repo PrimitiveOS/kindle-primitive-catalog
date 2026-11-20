@@ -12,7 +12,7 @@
   ],
   "repo": "https://github.com/PrimitiveOS/kindle-primitive-reader",
   "licence": "PolyForm-Noncommercial-1.0.0",
-  "description": "Read books, PDFs, comics and documents offline with page turns or scrolling. Keep bookmarks, highlights and notes, look up words in local dictionaries, and recognize text on scans.\n\nOpen Reader from Launcher or choose Open in Reader in Files. Browse Documents by folder with file type, size, and support labels.",
+  "description": "Read books, PDFs, comics and documents offline with page turns or scrolling. Keep bookmarks, highlights and notes, look up words in local dictionaries, and recognize text on scans.\n\nOpen Reader from Launcher or choose Open in Reader in Files. Browse Documents by folder with file type, size, and support labels.\n\nSwipe from the top for navigation and display settings, or from the bottom for typography, PDF view and scan controls.",
   "source": "hosted",
   "icon": "icon.png",
   "screenshots": [
@@ -31,6 +31,24 @@
     "notes": "Saves reading progress, annotations and preferences in Reader’s data folder."
   },
   "versions": [
+    {
+      "version": "0.1.2",
+      "date": "2026-11-21",
+      "notes": "Swipe for icon-based navigation and live reading settings. Reader adds facing pages, independent margins, scan controls, dictionary sources, and an expanded book map and page browser.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.2/primitive-reader-0.1.2-armhf.zip",
+          "sha256": "8e9dc6c7a341541ea493c9855bb3abc6417d5ad968e4c5a4856487c903894fbf",
+          "size": 16949051
+        }
+      }
+    },
     {
       "version": "0.1.1",
       "date": "2026-11-20",
