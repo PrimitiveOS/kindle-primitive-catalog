@@ -6,13 +6,13 @@
   "subtitle": "A web browser made for e-ink",
   "developer": {
     "name": "Primitive AI",
-    "url": "https://github.com/DoanNguyenTrong"
+    "url": "https://github.com/PrimitiveOS"
   },
   "categories": [
     "internet"
   ],
   "description": "Primitive Browser shows the web on a Kindle's e-ink screen. It has its own page engine, a night mode, an images switch, quick settings for Wi-Fi and the battery, and reading that turns pages with a tap. It runs from your home screen and returns to it when you leave.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-browser",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-browser",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -41,7 +41,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-browser/releases/download/v0.2.18/primitive-browser-0.2.18-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-browser/releases/download/v0.2.18/primitive-browser-0.2.18-armhf.zip",
           "sha256": "4689f7f5051dd652be52f4a69f0a76a7ec77ce438719465ae06c1956cdfd0ede",
           "size": 9511879
         }
@@ -61,7 +61,7 @@
       ],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-browser/releases/download/v0.2.17/primitive-browser-0.2.17-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-browser/releases/download/v0.2.17/primitive-browser-0.2.17-armhf.zip",
           "sha256": "7be3aa25ef743affac5704dcaad7c8fccf5a0180467064631e061c5ba6b6928b",
           "size": 9504649
         }

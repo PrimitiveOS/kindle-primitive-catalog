@@ -85,5 +85,9 @@ assert counted["downloads"] == {
 assert baseline["apps"] == counted["apps"] == fallback["apps"] == invalid["apps"]
 assert fallback["downloads"] == invalid["downloads"] == counted["downloads"]
 assert partial["downloads"] == {"as_of": "2026-11-19T09:30:00Z", "by_app": {"primitive-snake": 21}}
+for card in partial["apps"]:
+    base = "https://primitiveos.github.io/kindle-primitive-catalog/v1"
+    assert card["listing"] == f'{base}/apps/{card["id"]}.json'
+    assert card["icon"] == f'{base}/icons/{card["id"]}.png'
 print("ok   optional download counts and previous snapshot fallback")
 PY

@@ -19,7 +19,7 @@ MAX_MANIFEST = 256 * 1024
 MAX_FILES = 5000
 HOSTS = {
     "github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com",
-    "raw.githubusercontent.com", "doannguyentrong.github.io",
+    "raw.githubusercontent.com", "primitiveos.github.io",
 }
 RESERVED = {"documents", "extensions", "system", "fonts", "screensaver", "koreader"}
 HOOKS = {"hooks/post-install.sh", "hooks/pre-uninstall.sh"}

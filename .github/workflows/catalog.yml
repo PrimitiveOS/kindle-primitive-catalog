@@ -27,7 +27,7 @@ jobs:
         run: |
           previous="$RUNNER_TEMP/published-index.json"
           if ! curl --fail --silent --show-error --max-time 15 --max-filesize 102400 \
-            https://doannguyentrong.github.io/kindle-primitive-catalog/v1/index.json -o "$previous"; then
+            https://primitiveos.github.io/kindle-primitive-catalog/v1/index.json -o "$previous"; then
             rm -f "$previous"
           fi
       - name: Collect GitHub release asset counts
@@ -56,7 +56,7 @@ jobs:
             --previous-index "$RUNNER_TEMP/published-index.json"
       - name: Check that the schema folder matches the umbrella repo
         run: |
-          git clone --depth 1 https://github.com/DoanNguyenTrong/kindle-primitive.git "$RUNNER_TEMP/umbrella"
+          git clone --depth 1 https://github.com/PrimitiveOS/kindle-primitive.git "$RUNNER_TEMP/umbrella"
           for f in app manifest index; do cmp "schema/$f.schema.json" "$RUNNER_TEMP/umbrella/schema/$f.schema.json"; done
       - name: Verify live assets, manifests and archive contents
         run: |

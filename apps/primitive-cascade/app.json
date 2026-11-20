@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Guide original falling shapes on a narrow board, clear rows and beat your score. Play with the page buttons or touch, and choose from three paces.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-cascade",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-cascade",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-cascade/releases/download/v0.1.0/primitive-cascade-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-cascade/releases/download/v0.1.0/primitive-cascade-0.1.0-armhf.zip",
           "sha256": "e32cda123b979069396cab73c2c4b7363d3f496c1304fbc5a0b126b5364aebfa",
           "size": 2681663
         }

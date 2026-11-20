@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://doannguyentrong.github.io/kindle-primitive-catalog/schema/app.schema.json",
+  "$id": "https://primitiveos.github.io/kindle-primitive-catalog/schema/app.schema.json",
   "title": "PrimitiveOS Store listing (apps/<id>/app.json)",
   "type": "object",
   "required": ["schema", "id", "name", "subtitle", "developer", "categories", "description", "repo", "licence", "source", "icon", "changes", "versions"],

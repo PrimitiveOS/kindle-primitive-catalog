@@ -20,7 +20,7 @@ from jsonschema import Draft202012Validator
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-OWNER = "DoanNguyenTrong"
+OWNER = "PrimitiveOS"
 ARCH = "armhf"
 SCREENSHOT_SIZE = (632, 840)
 SYSTEM_SCREENSHOTS = {"primitive-browser", "primitive-launcher", "primitive-store"}

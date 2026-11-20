@@ -6,13 +6,13 @@
   "subtitle": "Run shell commands on Kindle",
   "developer": {
     "name": "Primitive AI",
-    "url": "https://github.com/DoanNguyenTrong"
+    "url": "https://github.com/PrimitiveOS"
   },
   "categories": [
     "developer"
   ],
   "description": "Type a shell command on the on-screen keyboard and read its output. Primitive Terminal opens from the Kindle library and can also run from Primitive Launcher.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-terminal",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-terminal",
   "licence": "AGPL-3.0-only",
   "source": "hosted",
   "icon": "icon.png",
@@ -37,7 +37,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-terminal/releases/download/v0.1.8/primitive-terminal-0.1.8-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-terminal/releases/download/v0.1.8/primitive-terminal-0.1.8-armhf.zip",
           "sha256": "3f30776b24a6e013c61045e376b60c1cfca069474daaa7a22f0846f41832ab0d",
           "size": 1822586
         }

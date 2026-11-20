@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Generate a Sudoku puzzle with one solution. Choose a difficulty, add pencil marks, check the board for mistakes, and undo a move. Your current puzzle is saved.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-sudoku",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-sudoku",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-sudoku/releases/download/v0.1.0/primitive-sudoku-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-sudoku/releases/download/v0.1.0/primitive-sudoku-0.1.0-armhf.zip",
           "sha256": "11ebd69f79f84fba14f8347f8abd17e15de9c81441d3dfdcd3e133462a49637e",
           "size": 2678311
         }

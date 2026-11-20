@@ -11,7 +11,7 @@
     "utilities"
   ],
   "description": "Look up words, read definitions and examples, and save useful terms. Import your own UTF-8 dictionary from a tab-separated file and export favorites for Cards.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-dictionary",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-dictionary",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-dictionary/releases/download/v0.1.1/primitive-dictionary-0.1.1-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-dictionary/releases/download/v0.1.1/primitive-dictionary-0.1.1-armhf.zip",
           "sha256": "335a960a3124a6d70d07975d104096984149430bd14c6d3d7e2c4d666d6be0ab",
           "size": 1526604
         }

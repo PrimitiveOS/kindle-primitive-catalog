@@ -2,14 +2,14 @@
 
 Store reads the public PrimitiveOS app catalog from GitHub Pages. This repository publishes `index.json` for app cards,
 `collections.json` for Today groups, `apps/<id>.json` for individual listings, and the icons and screenshots.
-[Store source](https://github.com/DoanNguyenTrong/kindle-primitive-store)
+[Live catalog index](https://primitiveos.github.io/kindle-primitive-catalog/v1/index.json) · [Store source](https://github.com/PrimitiveOS/kindle-primitive-store)
 
 No binaries are kept here. A listing points at a release asset, and the store checks its size and SHA-256 before it
 installs anything.
 
 ## Add or update an app
 
-Read [docs/store-submit-app.md](https://github.com/DoanNguyenTrong/kindle-primitive/blob/main/docs/store-submit-app.md) in the
+Read [docs/store-submit-app.md](https://github.com/PrimitiveOS/kindle-primitive/blob/main/docs/store-submit-app.md) in the
 PrimitiveOS umbrella repo. Add `apps/<id>/app.json`, `icon.png` and `shots/`, run `sh scripts/test.sh`, and open a pull request.
 The catalog tools require Python 3 with `jsonschema` and `Pillow`. CI verifies live package downloads, manifests and
 archive contents. A scheduled check monitors published asset sizes and hashes.
@@ -18,10 +18,10 @@ archive contents. A scheduled check monitors published asset sizes and hashes.
 
 The Catalog workflow updates download counts daily and on each publication. Its run summary shows the latest per-app
 totals, and the `app-download-counts` artifact includes JSON, CSV, and Markdown.
-[Catalog workflow](https://github.com/DoanNguyenTrong/kindle-primitive-catalog/actions/workflows/catalog.yml)
+[Catalog workflow](https://github.com/PrimitiveOS/kindle-primitive-catalog/actions/workflows/catalog.yml)
 
 Run the manual report workflow to collect a snapshot on demand.
-[Manual report workflow](https://github.com/DoanNguyenTrong/kindle-primitive-catalog/actions/workflows/download-counts.yml)
+[Manual report workflow](https://github.com/PrimitiveOS/kindle-primitive-catalog/actions/workflows/download-counts.yml)
 
 Store reads available counts from the optional `downloads` field in `index.json` during its regular catalog
 refresh. The snapshot includes `as_of`, the collection time, and `by_app`, a map keyed by app ID. If fresh counts

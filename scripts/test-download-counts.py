@@ -11,7 +11,7 @@ from urllib.error import HTTPError
 
 reporter = runpy.run_path(str(Path(__file__).with_name("download-counts.py")))
 collect, report_app = reporter["collect"], reporter["report_app"]
-REPO = "https://github.com/DoanNguyenTrong/kindle-primitive-2048"
+REPO = "https://github.com/PrimitiveOS/kindle-primitive-2048"
 LISTING = {
     "id": "primitive-tidefork",
     "name": "2048",
@@ -67,11 +67,13 @@ class DownloadCountTests(unittest.TestCase):
             LISTING | {"source": "hosted"},
             {"id": "primitive-notes", "source": "hosted", "name": "Notes", "repo": notes_repo, "versions": []},
             {"id": "koreader", "source": "link", "repo": "https://github.com/koreader/koreader"},
+            {"id": "other-app", "source": "hosted", "repo": "https://github.com/example/kindle-primitive-other-app"},
         ]
 
         def fake_releases(repository, _token):
-            if repository.endswith("-notes"):
+            if repository == "DoanNguyenTrong/kindle-primitive-notes":
                 raise HTTPError(notes_repo, 503, "Unavailable", {}, None)
+            self.assertEqual(repository, "PrimitiveOS/kindle-primitive-2048")
             return [release("v0.1.2", asset(1, "primitive-tidefork-0.1.2-armhf.zip", 2))]
 
         with tempfile.TemporaryDirectory() as temporary, patch.dict(collect.__globals__, releases=fake_releases):

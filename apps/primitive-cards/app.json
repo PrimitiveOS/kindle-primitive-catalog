@@ -11,7 +11,7 @@
     "productivity"
   ],
   "description": "Review due flashcards or try a short self-test, then retry missed cards without changing your review schedule. Create decks in Cards or import Anki and two-column text files from Documents.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-cards",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-cards",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-cards/releases/download/v0.1.1/primitive-cards-0.1.1-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-cards/releases/download/v0.1.1/primitive-cards-0.1.1-armhf.zip",
           "sha256": "d28820fc5c6ec47e5d0aff296a7e2b7c3d869c9fbbb2ef614365a1eef3f76fae",
           "size": 3773704
         }
@@ -53,7 +53,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-cards/releases/download/v0.1.0/primitive-cards-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-cards/releases/download/v0.1.0/primitive-cards-0.1.0-armhf.zip",
           "sha256": "8999e4af0e542da616ecfc27bca18e8eb911bfe69fd9b96bde02c80a783816af",
           "size": 3743196
         }

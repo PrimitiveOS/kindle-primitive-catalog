@@ -11,7 +11,7 @@
     "productivity"
   ],
   "description": "Study ten original beginner English lessons with Vietnamese instructions. Choose an answer, complete a sentence, or tap words in order. Revisit mistakes by topic and continue from your saved progress offline.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-language-practice",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-language-practice",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-language-practice/releases/download/v0.1.0/primitive-language-practice-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-language-practice/releases/download/v0.1.0/primitive-language-practice-0.1.0-armhf.zip",
           "sha256": "2710189e69f8996f8a08a097607baaa8907d1e77ab90c48bf278eab6693759aa",
           "size": 1490179
         }

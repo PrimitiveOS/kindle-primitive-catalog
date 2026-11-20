@@ -4,10 +4,10 @@
   "dir": "launcher",
   "name": "Primitive Launcher",
   "subtitle": "Your PrimitiveOS home screen",
-  "developer": { "name": "Primitive AI", "url": "https://github.com/DoanNguyenTrong" },
+  "developer": { "name": "Primitive AI", "url": "https://github.com/PrimitiveOS" },
   "categories": ["system"],
   "description": "Primitive Launcher replaces the Kindle's shop-style home screen with a calm grid of your apps. It has quick settings, Wi-Fi, SSH and DNS, display, sleep, power, USB drive mode and an optional start at boot. Leaving it returns to Amazon's interface.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-launcher",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -30,7 +30,7 @@
       "tested_on": ["KindleOasis3"],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.3.21/primitive-launcher-0.3.21-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.3.21/primitive-launcher-0.3.21-armhf.zip",
           "sha256": "2b6dea5f2d0e881a5e8844aaf64ceae2f28ece456ba3919d11efb7ce4c448022",
           "size": 4612000
         }

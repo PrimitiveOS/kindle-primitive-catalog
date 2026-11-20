@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Play draw-one or draw-three Klondike with tap controls and undo.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-solitaire",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-solitaire",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-solitaire/releases/download/v0.1.0/primitive-solitaire-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-solitaire/releases/download/v0.1.0/primitive-solitaire-0.1.0-armhf.zip",
           "sha256": "ac4f5a4acb15af420cb2f6dc0e276600116c8443cc959427d9e17d113bb690f7",
           "size": 2695368
         }

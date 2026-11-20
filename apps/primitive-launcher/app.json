@@ -6,13 +6,13 @@
   "subtitle": "Your PrimitiveOS home screen",
   "developer": {
     "name": "Primitive AI",
-    "url": "https://github.com/DoanNguyenTrong"
+    "url": "https://github.com/PrimitiveOS"
   },
   "categories": [
     "system"
   ],
   "description": "Open your app grid, choose a wallpaper, and manage battery, display, apps, Wi-Fi, storage, and time from a scrolling Settings list. Use the Kindle UI tile to return to Amazon’s interface.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-launcher",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -41,7 +41,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.5.3/primitive-launcher-0.5.3-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.5.3/primitive-launcher-0.5.3-armhf.zip",
           "sha256": "96059bdb10f7c80e370801bc26fb354e704d84a06a6892588ff0ad7bebc91920",
           "size": 4583931
         }
@@ -59,7 +59,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.4.10/primitive-launcher-0.4.10-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.4.10/primitive-launcher-0.4.10-armhf.zip",
           "sha256": "bb4f45325535e6f5f23f471c27720a84b600cbe487d778a819f2294dd2daf72c",
           "size": 4525406
         }
@@ -77,7 +77,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.4.9/primitive-launcher-0.4.9-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.4.9/primitive-launcher-0.4.9-armhf.zip",
           "sha256": "2e63306c19ddab65e0bb802359d73bdf8c2f1affd4f35bb063dde502bd5e54cc",
           "size": 4524905
         }
@@ -95,7 +95,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-launcher/releases/download/v0.4.7/primitive-launcher-0.4.7-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.4.7/primitive-launcher-0.4.7-armhf.zip",
           "sha256": "044ab3aa367d060cf8024fdf652f7a4c865a89183f87e8d5e70b6bd43d97de0a",
           "size": 4524558
         }

@@ -6,13 +6,13 @@
   "subtitle": "Find apps for PrimitiveOS",
   "developer": {
     "name": "Primitive AI",
-    "url": "https://github.com/DoanNguyenTrong"
+    "url": "https://github.com/PrimitiveOS"
   },
   "categories": [
     "system"
   ],
   "description": "Browse and install apps over Wi-Fi. Swipe through lists, check GitHub package download totals on app pages, and use Updates to manage installed apps.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-store",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-store",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -37,7 +37,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.6/primitive-store-0.1.6-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.6/primitive-store-0.1.6-armhf.zip",
           "sha256": "6acae2f5dd2c3824abb218624f0d5a993d8a5a74d02c2467d65a5191cc7ab3fe",
           "size": 3880668
         }
@@ -55,7 +55,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.4/primitive-store-0.1.4-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.4/primitive-store-0.1.4-armhf.zip",
           "sha256": "d90ec619cebea0f5eb06f875e04d174c9051aabc5941671e510e499996c58b7d",
           "size": 3841164
         }
@@ -73,7 +73,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.3/primitive-store-0.1.3-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.3/primitive-store-0.1.3-armhf.zip",
           "sha256": "b3dfb1d44903886570fe36b49886a8daecefe5c7c3a03286124ee3f872949214",
           "size": 3802855
         }
@@ -91,7 +91,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.2/primitive-store-0.1.2-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.2/primitive-store-0.1.2-armhf.zip",
           "sha256": "10a8a6d81cb9cdeb876aad4e3d6e435ae0d4d42c575bf7f4721cd64116704a83",
           "size": 3796558
         }
@@ -109,7 +109,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-store/releases/download/v0.1.1/primitive-store-0.1.1-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.1/primitive-store-0.1.1-armhf.zip",
           "sha256": "8617aea49e6e69e19f54fd3d25e6d2c7d265a6864f838e7b696ac18057ae35ef",
           "size": 3795513
         }

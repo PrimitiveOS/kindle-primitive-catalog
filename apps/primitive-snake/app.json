@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Choose a speed from 1 to 9 and steer a continuously moving snake. Each bite adds a segment and awards points equal to your chosen speed. Fill the board for a 100-point bonus. A wall or body collision ends the round.\n\nSwipe or tap the arrow buttons to steer. Pause at any time and beat your saved best score.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-snake",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-snake",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-snake/releases/download/v0.1.0/primitive-snake-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-snake/releases/download/v0.1.0/primitive-snake-0.1.0-armhf.zip",
           "sha256": "f433448a6694a45cc5d61bdbba5f688c73aed57da50ec145d98982a4a8a774b4",
           "size": 1446199
         }

@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Turn the junctions and dispatch the train to its depot. Switchyard includes eight original rail puzzles with a route trace after every dispatch.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-switchyard",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-switchyard",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-switchyard/releases/download/v0.1.0/primitive-switchyard-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-switchyard/releases/download/v0.1.0/primitive-switchyard-0.1.0-armhf.zip",
           "sha256": "23c1b795d921e12895b492e1095d9b536df62fb58e5d4b4995527f3d989c5946",
           "size": 1471151
         }

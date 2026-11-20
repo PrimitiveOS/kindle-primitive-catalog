@@ -16,9 +16,8 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OWNER = "DoanNguyenTrong"
 API = "https://api.github.com"
-REPOSITORY = re.compile(rf"https://github\.com/({OWNER}/[a-z0-9._-]+)", re.IGNORECASE)
+REPOSITORY = re.compile(r"https://github\.com/((?:PrimitiveOS|DoanNguyenTrong)/[a-z0-9._-]+)", re.IGNORECASE)
 PACKAGE_SUFFIX = r"-v?\d+(?:\.\d+)+(?:-p\d+)?(?:-arm(?:hf|el))?\.zip"
 
 

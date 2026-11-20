@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Swipe to move every tile toward one edge. Matching numbers merge and add to your score. A 2 or 4 appears after each move that changes the board. Keep playing past 2048 and beat your best score before you run out of moves.\n\nYour board and best score save between launches. The original Tidefork challenges and saved progress are available under Line puzzles.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-2048",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-2048",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-2048/releases/download/v0.1.2/primitive-tidefork-0.1.2-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-2048/releases/download/v0.1.2/primitive-tidefork-0.1.2-armhf.zip",
           "sha256": "b7bdf7f0dc2596207e1f4c20082d2bbc2cfbbc3bc73f88e9666c8799f75ec6dc",
           "size": 1487722
         }
@@ -53,7 +53,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-2048/releases/download/v0.1.0/primitive-tidefork-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-2048/releases/download/v0.1.0/primitive-tidefork-0.1.0-armhf.zip",
           "sha256": "a29b67b9e958c4e52a72a2895ef689dc10137033f9c6855a709a691189d0fb57",
           "size": 1476073
         }

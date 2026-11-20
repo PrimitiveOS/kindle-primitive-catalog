@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://doannguyentrong.github.io/kindle-primitive-catalog/schema/manifest.schema.json",
+  "$id": "https://primitiveos.github.io/kindle-primitive-catalog/schema/manifest.schema.json",
   "title": "Package manifest (manifest.json inside a store zip)",
   "type": "object",
   "required": ["schema", "id", "dir", "version", "arch", "firmware", "files"],

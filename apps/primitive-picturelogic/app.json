@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Read the clues along each row and column, then fill the matching squares to reveal a picture. Play original 5×5 and 10×10 puzzles offline and resume any puzzle where you left off.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-nonogram",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-nonogram",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-nonogram/releases/download/v0.1.1/primitive-picturelogic-0.1.1-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-nonogram/releases/download/v0.1.1/primitive-picturelogic-0.1.1-armhf.zip",
           "sha256": "f85a1f095892960a9a7425b175ad5a976ff39bbe2b7837024116fe0606c79b7a",
           "size": 1471840
         }
@@ -53,7 +53,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-nonogram/releases/download/v0.1.0/primitive-picturelogic-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-nonogram/releases/download/v0.1.0/primitive-picturelogic-0.1.0-armhf.zip",
           "sha256": "e77c6f81b5ef6e84d861fa53061911a3ae09f8b8db6ff9e360024ff1c76d80ce",
           "size": 1471944
         }

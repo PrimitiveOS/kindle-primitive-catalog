@@ -11,7 +11,7 @@
     "productivity"
   ],
   "description": "Choose a 25/5 or 50/10 focus and break preset or set your own timer. Label sessions by subject, then see weekly time and recent sessions in the study log.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-focus",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-focus",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-focus/releases/download/v0.1.1/primitive-focus-0.1.1-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-focus/releases/download/v0.1.1/primitive-focus-0.1.1-armhf.zip",
           "sha256": "b2d7765d267b4c03e72dd3313407881a11fb5913d8f4fa44ddfab66f441bd4b4",
           "size": 2705444
         }
@@ -53,7 +53,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-focus/releases/download/v0.1.0/primitive-focus-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-focus/releases/download/v0.1.0/primitive-focus-0.1.0-armhf.zip",
           "sha256": "d37760b5cf2057f1b9b298f7b55996938b4f114eff21a1d70f962fecd194c120",
           "size": 2678685
         }

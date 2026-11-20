@@ -14,7 +14,8 @@ from jsonschema import Draft202012Validator, FormatChecker
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
-PUBLIC_BASE = "https://doannguyentrong.github.io/kindle-primitive-catalog/v1"
+PUBLIC_BASE = "https://primitiveos.github.io/kindle-primitive-catalog/v1"
+FIRST_PARTY_REPO = re.compile(r"/(?:PrimitiveOS|DoanNguyenTrong)/kindle-primitive-[a-z0-9-]+/?", re.IGNORECASE)
 CATEGORIES = [
     ("reading", "Reading"), ("productivity", "Productivity"), ("internet", "Internet"), ("games", "Games"),
     ("audio", "Music & Audio"), ("creativity", "Drawing & Design"), ("developer", "Developer Tools"),
@@ -76,7 +77,7 @@ def check_listing(folder, validator):
         primitive = (
             listing["developer"]["name"] == "Primitive AI"
             and repo.scheme == "https" and repo.netloc == "github.com"
-            and re.fullmatch(r"/DoanNguyenTrong/kindle-primitive-[a-z0-9-]+/?", repo.path)
+            and FIRST_PARTY_REPO.fullmatch(repo.path)
         )
         licence = listing["licence"]
         if licence not in HOSTED_LICENCES and not (primitive and licence == "PolyForm-Noncommercial-1.0.0"):

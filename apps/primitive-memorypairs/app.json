@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Turn over cards to find matching monochrome symbols. Play with 12, 16, or 20 cards, beat your fewest attempts on each board size, and resume games between sessions.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-memory-match",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-memory-match",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-memory-match/releases/download/v0.1.1/primitive-memorypairs-0.1.1-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-memory-match/releases/download/v0.1.1/primitive-memorypairs-0.1.1-armhf.zip",
           "sha256": "d57cc1663916b750d94ea505a85a0c0aa8545a289daac76eb16b343715d5c9bb",
           "size": 1481373
         }
@@ -53,7 +53,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-memory-match/releases/download/v0.1.0/primitive-memorypairs-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-memory-match/releases/download/v0.1.0/primitive-memorypairs-0.1.0-armhf.zip",
           "sha256": "f7fd11b1a782f3dceb9e6d6413f48c29b1f0d391ccc7ea0451a51083e599daca",
           "size": 1481410
         }

@@ -11,7 +11,7 @@
     "productivity"
   ],
   "description": "Write, pin, and search plain-text notes. Check items off and reorder them in Checklist view, or start a reading journal from Templates. Your notes stay as UTF-8 text files.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-notes",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-notes",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
@@ -35,7 +35,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-notes/releases/download/v0.1.1/primitive-notes-0.1.1-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-notes/releases/download/v0.1.1/primitive-notes-0.1.1-armhf.zip",
           "sha256": "357da3fea575d28427c49be0773fdf27217b0e2e62e298f3a8ceaa3c07302b22",
           "size": 2681560
         }
@@ -53,7 +53,7 @@
       "tested_on": [],
       "assets": {
         "armhf": {
-          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-notes/releases/download/v0.1.0/primitive-notes-0.1.0-armhf.zip",
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-notes/releases/download/v0.1.0/primitive-notes-0.1.0-armhf.zip",
           "sha256": "7e12b9e0b6df0ceab64f40ee9b8601edc8817e74e60ed3b9ac456d0bf36c7ac8",
           "size": 2672585
         }
