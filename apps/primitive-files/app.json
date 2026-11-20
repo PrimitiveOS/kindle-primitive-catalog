@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "id": "primitive-files",
+  "dir": "files",
+  "name": "Files",
+  "subtitle": "Browse and organise Kindle files",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "utilities"
+  ],
+  "description": "Browse Documents and other supported user folders. Search by filename, create folders, rename, copy or move entries, and remove files and empty folders. Open supported books and PDFs in an installed KOReader.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-files",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false,
+    "notes": "Changes user files when you create, rename, copy, move or delete them."
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-11-20",
+      "notes": "Browse and search supported Kindle folders and manage files and folders. Open supported books and PDFs in an installed KOReader.\nInstalled and launched on Kindle Oasis 3 with firmware 5.18.2. Opened a sample PDF in KOReader.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/DoanNguyenTrong/kindle-primitive-files/releases/download/v0.1.0/primitive-files-0.1.0-armhf.zip",
+          "sha256": "5fda87f6a56a16a277b5ce9dbaa57a7f9b2bb87a3c73bebe88df77d87e55d588",
+          "size": 1508257
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png"
+  ]
+}
