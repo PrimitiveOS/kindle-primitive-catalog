@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "id": "primitive-viewer",
+  "dir": "viewer",
+  "name": "Viewer",
+  "subtitle": "Open PDFs, JPEGs, and PNGs",
+  "developer": {
+    "name": "Primitive AI",
+    "url": "https://github.com/PrimitiveOS"
+  },
+  "categories": [
+    "reading",
+    "utilities"
+  ],
+  "description": "Open PDFs, JPEGs, and PNGs stored on your Kindle. Use vertical swipes or the Kindle page buttons to scroll through the file picker and read PDFs continuously. The page indicator shows where you are. Use the zoom controls to adjust the view, and open View to fit or rotate PDFs and images.\n\nOpen Viewer from Launcher or choose Open in Viewer from Files 0.1.1 or later. Viewer reads documents offline and saves your place on the Kindle.",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-viewer",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false,
+    "notes": "Opens documents read-only and saves recent files and page positions in Viewer’s folder."
+  },
+  "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-20",
+      "notes": "Scroll the Open file list with the Kindle page buttons.\nVerified both page buttons in the file picker on Kindle Oasis 3 (firmware 5.18.2).",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-viewer/releases/download/v0.1.1/primitive-viewer-0.1.1-armhf.zip",
+          "sha256": "54c46f766aa19fa580811d03d5783c4e1cf6732e4006645ddf7dbd0bd2232cb0",
+          "size": 3847503
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "shots/1.png",
+    "shots/2.png",
+    "shots/3.png",
+    "shots/4.png"
+  ]
+}

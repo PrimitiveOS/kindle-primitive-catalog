@@ -27,6 +27,7 @@
         "primitive-crateshift",
         "primitive-crossword",
         "primitive-dictionary",
+        "primitive-files",
         "primitive-focus",
         "primitive-habits",
         "primitive-hello",
@@ -48,6 +49,7 @@
         "primitive-tasks",
         "primitive-terminal",
         "primitive-tidefork",
+        "primitive-viewer",
         "primitive-words"
       ]
     },
