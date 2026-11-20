@@ -11,7 +11,7 @@
   "categories": [
     "system"
   ],
-  "description": "Open your app grid, choose a wallpaper, and manage battery, display, apps, Wi-Fi, storage, and time from a scrolling Settings list. Use the Kindle UI tile to return to Amazon’s interface.",
+  "description": "Open your app grid and preview separate Home, Sleep, and Startup wallpapers before applying them. Set opacity for each screen. Manage battery, display, apps, Wi-Fi, storage, and time from a scrolling Settings list. Use the Kindle UI tile to return to Amazon’s interface.",
   "repo": "https://github.com/PrimitiveOS/kindle-primitive-launcher",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
@@ -29,6 +29,26 @@
     "notes": "Writes its boot job to /etc/upstart while the root filesystem is writable, only when it changes."
   },
   "versions": [
+    {
+      "version": "0.5.5",
+      "date": "2026-11-20",
+      "notes": "Preview Home, Sleep, and Startup wallpapers and set their opacity independently. Home wallpaper fills the screen behind the status bar and page indicator.\nVerified the in-place update on Kindle Oasis 3 (firmware 5.18.2).",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.5.5/primitive-launcher-0.5.5-armhf.zip",
+          "sha256": "c96729dc930d4483a9744b50152d6fde9dab18b5242b68cc15f6f789599e2c01",
+          "size": 4591393
+        }
+      }
+    },
     {
       "version": "0.5.4",
       "date": "2026-11-20",
