@@ -33,13 +33,15 @@
     {
       "version": "0.5.9",
       "date": "2026-11-20",
-      "notes": "See app versions and uninstall installed packages from Settings › Apps › Installed apps. The list works offline and Home refreshes after removal.",
+      "notes": "See app versions and uninstall installed packages from Settings › Apps › Installed apps. The list works offline and Home refreshes after removal.\nVerified the in-place update and Settings uninstall on Kindle Oasis 3 with firmware 5.18.2.",
       "firmware": {
         "min": "5.16.3",
         "max": null
       },
       "requires": {},
-      "tested_on": [],
+      "tested_on": [
+        "KindleOasis3"
+      ],
       "assets": {
         "armhf": {
           "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.5.9/primitive-launcher-0.5.9-armhf.zip",
