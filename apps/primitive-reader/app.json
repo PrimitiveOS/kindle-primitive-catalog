@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.8",
+      "date": "2026-11-22",
+      "notes": "Numbered and nested lists keep their markers. Read supported tables in columns and select text in a cell. Avoid extra blank pages at chapter ends and show more mathematical symbols using installed Kindle fonts.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.8/primitive-reader-0.1.8-armhf.zip",
+          "sha256": "c59afe923c77ff41f9f66dfc39339730bc404575236d7ccd82b996c84747ba84",
+          "size": 18174040
+        }
+      }
+    },
+    {
       "version": "0.1.7",
       "date": "2026-11-22",
       "notes": "Open long EPUB chapters with tight line spacing, retain illustrations and resume image-only pages. Read footnotes in place, search a selection and move between dictionary results without losing your passage. Print-color PDFs use less memory. Open JPEG 2000 images and comic pages.",
