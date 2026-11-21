@@ -5,6 +5,7 @@ ROOT=$(cd "$(dirname "$0")/.." && pwd)
 cd "$ROOT"
 python3 -I scripts/test-download-counts.py
 python3 -I scripts/test-check-assets.py
+python3 -I scripts/test-tested-on.py
 TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT
 python3 -I scripts/build-index.py --out "$TMP/v1" --now 2026-11-19T10:00:00Z \

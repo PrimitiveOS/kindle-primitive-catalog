@@ -57,7 +57,11 @@
           "requires": {
             "type": "object", "additionalProperties": { "type": "string", "pattern": "^>=[0-9]+\\.[0-9]+\\.[0-9]+$" }
           },
-          "tested_on": { "type": "array", "items": { "type": "string" } },
+          "tested_on": {
+            "type": "array", "uniqueItems": true,
+            "description": "The Kindle models this version was run on. Each name is a catalog model name from the launcher's model table (kl-core models.rs). A model not listed here shows \"Not tested on your Kindle yet\" in the Store; the install is still allowed.",
+            "items": { "enum": ["KindleOasis3", "KindlePaperwhite4", "KindlePaperwhite5", "KindlePaperwhite5SE", "KindlePaperwhite6", "Kindle10", "Kindle11", "Kindle11_2024", "KindleColorsoft", "KindleScribe", "KindleScribe2024"] }
+          },
           "withdrawn": { "type": "string", "minLength": 1 },
           "assets": {
             "type": "object", "additionalProperties": false,
