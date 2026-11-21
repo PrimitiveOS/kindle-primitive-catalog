@@ -31,6 +31,26 @@
   },
   "versions": [
     {
+      "version": "0.6.22",
+      "date": "2026-11-21",
+      "notes": "The device name page says Save, and its top button says Cancel (it leaves without saving). An unset device name shows \"Tap to set\".",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.6.22/primitive-launcher-0.6.22-armhf.zip",
+          "sha256": "4caed2b1a5d219502c4606bc83bd9a45811728bb53439a9ebcdeb0891786ebe1",
+          "size": 4654234
+        }
+      }
+    },
+    {
       "version": "0.6.18",
       "date": "2026-11-21",
       "notes": "Settings has its gear as an icon like the other apps, in light and dark mode. A file transfer answers a wrong code without a connection reset.",
