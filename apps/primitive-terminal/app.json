@@ -26,6 +26,26 @@
   },
   "versions": [
     {
+      "version": "0.1.9",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-terminal/releases/download/v0.1.9/primitive-terminal-0.1.9-armhf.zip",
+          "sha256": "4de9561e674f98d87ea5f8ae8c0baca5625754b9b8209dea6bb47af93aeba204",
+          "size": 1848525
+        }
+      }
+    },
+    {
       "version": "0.1.8",
       "date": "2026-11-19",
       "notes": "Package the standalone Terminal for ARMHF and ARMEL.\nShip the AGPL software license and the separate documentation license.",

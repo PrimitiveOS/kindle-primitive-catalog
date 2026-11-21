@@ -24,6 +24,26 @@
   },
   "versions": [
     {
+      "version": "0.1.2",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-memory-match/releases/download/v0.1.2/primitive-memorypairs-0.1.2-armhf.zip",
+          "sha256": "dd4e5a7290cf00d9184fe71c9455a0a6af12bdaff9f020c5b9776a17a36f9e8b",
+          "size": 2683252
+        }
+      }
+    },
+    {
       "version": "0.1.1",
       "date": "2026-11-19",
       "notes": "Use the Memory Match title for the matching game.\nMismatched cards turn face down automatically after one second.",

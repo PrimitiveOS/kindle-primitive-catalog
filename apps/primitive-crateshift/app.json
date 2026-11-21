@@ -24,6 +24,26 @@
   },
   "versions": [
     {
+      "version": "0.1.3",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-crate-shift/releases/download/v0.1.3/primitive-crateshift-0.1.3-armhf.zip",
+          "sha256": "7b10ebd0b2647e6698631cea55b01441dc653276b94eee544cee3ea19d597f6d",
+          "size": 2687003
+        }
+      }
+    },
+    {
       "version": "0.1.2",
       "date": "2026-11-19",
       "notes": "Restore the Crate Shift title for the original box-pushing puzzles.\nKeep the dock visible while the worker stands on it.",

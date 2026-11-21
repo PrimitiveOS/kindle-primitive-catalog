@@ -24,6 +24,26 @@
   },
   "versions": [
     {
+      "version": "0.1.1",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-blocks/releases/download/v0.1.1/primitive-blocks-0.1.1-armhf.zip",
+          "sha256": "1dc27de48f4cea3cef8a2e397d9d7e0da8e1b3255184af852a6613f03f99e315",
+          "size": 2674691
+        }
+      }
+    },
+    {
       "version": "0.1.0",
       "date": "2026-11-19",
       "notes": "Place three pieces at a time on a nine-by-nine board. Fill a row, column, or three-by-three box to clear it and beat your best score.",
