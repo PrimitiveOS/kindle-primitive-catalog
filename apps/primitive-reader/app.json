@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.11",
+      "date": "2026-11-22",
+      "notes": "Import nearby saved positions from KOReader, open DjVu chapter outlines, and extend saved highlights across chapters or fixed pages.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.11/primitive-reader-0.1.11-armhf.zip",
+          "sha256": "dbec930c3e084219548762807c283f417dc7b9e4d045d1bc5658c6e3ca464a3e",
+          "size": 18449828
+        }
+      }
+    },
+    {
       "version": "0.1.10",
       "date": "2026-11-22",
       "notes": "Explore fixed pages in Book map. Find highlights and notes from annotation search, keep matched PDF passages visible at high zoom, and use English word breaks that follow the language of the book or passage.",
