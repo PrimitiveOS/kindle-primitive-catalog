@@ -6,6 +6,7 @@ import html
 import json
 import os
 import stat
+import sys
 import tempfile
 import time
 import urllib.request
@@ -24,6 +25,24 @@ HOSTS = {
 RESERVED = {"documents", "extensions", "system", "fonts", "screensaver", "koreader"}
 HOOKS = {"hooks/post-install.sh", "hooks/pre-uninstall.sh"}
 MAX_HOOK_BYTES = 64 * 1024
+# A native app's library entry (a documents/*.sh whose header says DontUseFBInk) declares that the app redraws when
+# Primitive Launcher asks (SIGUSR1). The supervisor looks for this exact line in the entry's first ten lines; an app
+# without it is restarted on wake instead. The launcher's own entry (PrimitiveLauncherEntry) is the system layer.
+WAKE_REDRAW = b"# Wake: redraw"
+WAKE_REDRAW_LINES = 10
+# Enough for the header and its icon line; the rest of an entry is not read.
+MAX_ENTRY_BYTES = 1024 * 1024
+# Apps listed before native entries had to declare it (2026-11-21). A package of theirs without the line is a
+# warning; any other app's native entry must declare it. Never add to this list.
+WAKE_REDRAW_OPTIONAL = frozenset({
+    "primitive-agenda", "primitive-blocks", "primitive-browser", "primitive-calculator", "primitive-cards",
+    "primitive-cascade", "primitive-chess", "primitive-crateshift", "primitive-crossword", "primitive-dictionary",
+    "primitive-files", "primitive-focus", "primitive-habits", "primitive-hello", "primitive-language-practice",
+    "primitive-math-practice", "primitive-memorypairs", "primitive-minesweeper", "primitive-notes",
+    "primitive-picturelogic", "primitive-reader", "primitive-reading-practice", "primitive-ships", "primitive-snake",
+    "primitive-solitaire", "primitive-starship", "primitive-store", "primitive-sudoku", "primitive-switchyard",
+    "primitive-tasks", "primitive-terminal", "primitive-tidefork", "primitive-viewer", "primitive-words",
+})
 
 
 def check_url(url):
@@ -80,7 +99,30 @@ def installed_path(path, app_dir):
     )
 
 
-def validate_package(source, listing, version, arch, validator):
+def wake_redraw_problem(path, contents):
+    """Why a library entry breaks the wake redraw contract, or None. Only native app entries are checked: their
+    scriptlet header (the leading comment lines) says DontUseFBInk. The line itself is looked for as the supervisor
+    does (`head -n 10 | grep -Fx`): an exact line, a carriage return included, in the first ten lines."""
+    lines = contents.split(b"\n")
+    comments = set()
+    for line in lines:
+        text = line.strip()
+        if text and not text.startswith(b"#"):
+            break
+        comments.add(text[1:].strip())
+    if b"DontUseFBInk" not in comments or b"PrimitiveLauncherEntry" in comments:
+        return None
+    if WAKE_REDRAW in lines[:WAKE_REDRAW_LINES]:
+        return None
+    return (f"{path}: a native app entry must declare '{WAKE_REDRAW.decode()}' in its first {WAKE_REDRAW_LINES} lines "
+            "and redraw on SIGUSR1 (without it the launcher restarts the app on wake)")
+
+
+def warn_to_stderr(message):
+    print(f"warn {message}", file=sys.stderr)
+
+
+def validate_package(source, listing, version, arch, validator, warn=warn_to_stderr):
     app_id = listing["id"]
     app_dir = listing.get("dir", app_id)
     top = f"{app_id}-{version['version']}"
@@ -145,6 +187,15 @@ def validate_package(source, listing, version, arch, validator):
             raise ValueError("ZIP contents disagree with the manifest file list")
         if not all(installed_path(path, app_dir) for path in installed):
             raise ValueError("ZIP contains a file outside the app's allowed folders")
+        for path in sorted(installed):
+            if not (path.startswith("documents/") and path.endswith(".sh")):
+                continue
+            with archive.open(f"{top}/{path}") as script:
+                problem = wake_redraw_problem(path, script.read(MAX_ENTRY_BYTES))
+            if problem and app_id in WAKE_REDRAW_OPTIONAL:
+                warn(problem)
+            elif problem:
+                raise ValueError(problem)
         if archive.testzip() is not None:
             raise ValueError("ZIP contains a damaged file")
     return sorted(hooks)
@@ -181,16 +232,20 @@ def main():
                 label = f"{listing['id']} {version['version']} {arch}"
                 try:
                     hooks = []
+                    warnings = []
                     if args.deep:
                         with tempfile.TemporaryFile() as source:
                             download(asset, source)
                             source.seek(0)
-                            hooks = validate_package(source, listing, version, arch, validator)
+                            hooks = validate_package(source, listing, version, arch, validator, warnings.append)
                     else:
                         download(asset, None)
                     print(f"ok   {label}")
+                    for warning in warnings:
+                        print(f"warn {label}: {warning}")
                     notes = ", ".join(flags + hooks) or "none"
                     reports.append((label, f"{asset['size']:,} bytes, changes: {notes}"))
+                    reports.extend((label, f"warning: {warning}") for warning in warnings)
                 except (OSError, ValueError, RuntimeError, NotImplementedError, zipfile.BadZipFile) as error:
                     failed = True
                     print(f"FAIL {label}: {error}")
