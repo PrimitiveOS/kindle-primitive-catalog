@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.13",
+      "date": "2026-11-22",
+      "notes": "Read saved notes on the page, choose overlapping highlights, find the previous or next occurrence from your passage and use the offline dictionaries installed with KOReader.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.13/primitive-reader-0.1.13-armhf.zip",
+          "sha256": "e7e3635510fe1ad5333a774456be0084ec9ba10d9eb0f64c5b53b53e1d81be3a",
+          "size": 18512244
+        }
+      }
+    },
+    {
       "version": "0.1.12",
       "date": "2026-11-22",
       "notes": "Import nearby EPUB bookmarks and highlights. Preserve publisher paragraph indents, including chapter-opening styles. Find phrases across printed PDF lines. Inspect a PDF link, copy its address or show its QR code.",
