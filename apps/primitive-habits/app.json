@@ -24,6 +24,24 @@
   },
   "versions": [
     {
+      "version": "0.1.3",
+      "date": "2026-11-22",
+      "notes": "The library icon has a dark form, shown in dark mode.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-habits/releases/download/v0.1.3/primitive-habits-0.1.3-armhf.zip",
+          "sha256": "dc2e042f1566b2684047421f002a8485810f92ca7edc3f6dbdd010b7b8887305",
+          "size": 2740357
+        }
+      }
+    },
+    {
       "version": "0.1.2",
       "date": "2026-11-21",
       "notes": "The check box for a habit reverses while it is tapped, and the rows reverse black and white.",
