@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.14",
+      "date": "2026-11-22",
+      "notes": "Read GIF illustrations, search with patterns or plain keyboard punctuation, set dictionary order for each book and edit hyphenation for a language.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.14/primitive-reader-0.1.14-armhf.zip",
+          "sha256": "4f4577afc64a22bffad74c9be658df096b77c43e1ba2ba9ad8af97ee309cfcad",
+          "size": 18683958
+        }
+      }
+    },
+    {
       "version": "0.1.13",
       "date": "2026-11-22",
       "notes": "Read saved notes on the page, choose overlapping highlights, find the previous or next occurrence from your passage and use the offline dictionaries installed with KOReader.",
