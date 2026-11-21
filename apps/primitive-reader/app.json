@@ -12,7 +12,7 @@
   ],
   "repo": "https://github.com/PrimitiveOS/kindle-primitive-reader",
   "licence": "PolyForm-Noncommercial-1.0.0",
-  "description": "Read EPUB, DRM-free AZW3 and MOBI, PDFs, comics and documents from the Kindle Documents folder. Browse chapters, follow links, adjust type and margins, and keep bookmarks, highlights and notes. Read extracted EPUB folders with their illustrations.\n\nUse physical buttons or touch, track book or chapter progress in the footer, and choose actions for reading gestures. Straighten scanned pages and recognize text offline with the included English OCR model.\n\nLocal dictionaries work offline. You can also select a passage and choose Wikipedia or translation. Reader shows the provider and text before sending an online request.",
+  "description": "Read EPUB, DRM-free AZW3 and MOBI, PDFs, comics and documents from the Kindle Documents folder. Browse chapters, follow links, adjust type and margins, and keep bookmarks, highlights and notes. Read extracted EPUB folders with their illustrations.\n\nUse physical buttons or touch, track book or chapter progress in the footer, and choose actions for reading gestures. Straighten scanned pages and recognize text offline with the included English OCR model.\n\nLocal dictionaries work offline. You can also select a passage and choose Wikipedia or translation. Reader shows the provider and text before sending an online request.\n\nPreview footnotes on the reading page, search a selected passage and move between dictionary definitions. Open JPEG 2000 images and comic pages.",
   "source": "hosted",
   "icon": "icon.png",
   "screenshots": [
@@ -31,6 +31,26 @@
     "notes": "Saves progress and annotations in Reader’s data folder. Wikipedia and translation send text only after you choose the online action."
   },
   "versions": [
+    {
+      "version": "0.1.7",
+      "date": "2026-11-22",
+      "notes": "Open long EPUB chapters with tight line spacing, retain illustrations and resume image-only pages. Read footnotes in place, search a selection and move between dictionary results without losing your passage. Print-color PDFs use less memory. Open JPEG 2000 images and comic pages.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.7/primitive-reader-0.1.7-armhf.zip",
+          "sha256": "728ee93a12793ebe08de8ebb2ba7a8e89186fd7eea8daf97c978a30ef8b5889a",
+          "size": 18142421
+        }
+      }
+    },
     {
       "version": "0.1.6",
       "date": "2026-11-22",
