@@ -238,12 +238,12 @@ def main():
         if snapshot is not None:
             index["downloads"] = snapshot
         validate(out / "index.json", index, index_validator)
-        expected = {"apps", "icons", "shots", "index.json", "collections.json"}
+        expected = {"apps", "badges", "icons", "shots", "index.json", "collections.json"}
         if out.is_dir():
             if out.is_symlink() or any(path.name not in expected for path in out.iterdir()):
                 raise ValueError(f"{out}: output directory contains files outside the catalog layout")
             shutil.rmtree(out)
-        for name in ("apps", "icons", "shots"):
+        for name in ("apps", "badges", "icons", "shots"):
             (out / name).mkdir(parents=True)
         for folder, listing in sources:
             app_id = listing["id"]
@@ -253,6 +253,12 @@ def main():
                 shutil.copyfile(folder / shot, out / "shots" / f"{app_id}-{i}.png")
         dump(out / "index.json", index)
         dump(out / "collections.json", selected)
+        # One shields.io endpoint file per app with its Store download count, so a README badge is always current
+        # with the daily snapshot (https://shields.io/badges/endpoint-badge).
+        if snapshot is not None:
+            for app_id, count in snapshot["by_app"].items():
+                dump(out / "badges" / f"{app_id}.json", {"schemaVersion": 1, "label": "Store downloads",
+                                                         "message": str(count), "color": "brightgreen"})
         print(f"wrote {len(sources)} apps and {len(selected['collections'])} collections to {out}")
     except (OSError, ValueError) as error:
         raise SystemExit(str(error)) from None
