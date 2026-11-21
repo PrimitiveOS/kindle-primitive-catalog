@@ -49,7 +49,7 @@ python3 -I scripts/build-index.py --download-counts /tmp/primitive-download-coun
 | `drafts/` | Listings that are not published yet (see `drafts/README.md`). |
 | `schema/` | Copies of the JSON schemas in the PrimitiveOS umbrella repository. CI checks they match. |
 | `scripts/check-app.sh` | Checks one app: schema, icon and screenshot sizes and colour. |
-| `scripts/check-assets.py` | Checks live asset sizes and hashes. Pass `--deep` to also validate ZIP contents. |
+| `scripts/check-assets.py` | Checks live asset sizes and hashes. Pass `--deep` to also validate ZIP contents. A native app's library entry (`# DontUseFBInk`) must have the line `# Wake: redraw` in its first ten lines. Apps listed before 2026-11-21 get a warning instead. |
 | `scripts/download-counts.py` | Summarizes GitHub's download counters for first-party package assets. |
 | `scripts/build-index.py` | Builds `site/v1/` (the index and the listings). |
 | `scripts/test.sh` | What CI runs before anything is published. |
