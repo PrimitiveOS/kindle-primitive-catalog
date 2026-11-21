@@ -40,7 +40,7 @@
         "max": null
       },
       "requires": {},
-      "tested_on": [],
+      "tested_on": ["KindleOasis3"],
       "assets": {
         "armhf": {
           "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.5/primitive-reader-0.1.5-armhf.zip",
