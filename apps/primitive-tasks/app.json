@@ -24,6 +24,24 @@
   },
   "versions": [
     {
+      "version": "0.1.3",
+      "date": "2026-11-22",
+      "notes": "The library icon has a dark form, shown in dark mode.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-tasks/releases/download/v0.1.3/primitive-tasks-0.1.3-armhf.zip",
+          "sha256": "b565354f9f03fefa94a3e13a6e7f5392786fd89d6aad42755bcd6758bb074e80",
+          "size": 2752292
+        }
+      }
+    },
+    {
       "version": "0.1.2",
       "date": "2026-11-21",
       "notes": "The task check box and the rows reverse black and white while they are tapped.",

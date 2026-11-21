@@ -25,6 +25,24 @@
   },
   "versions": [
     {
+      "version": "0.1.2",
+      "date": "2026-11-22",
+      "notes": "The library icon has a dark form, shown in dark mode.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reading-practice/releases/download/v0.1.2/primitive-reading-practice-0.1.2-armhf.zip",
+          "sha256": "3e2547e5191668e5dfc0766cbf78dc1c1e424c6da0a700eb5a49855ce424cf43",
+          "size": 2691962
+        }
+      }
+    },
+    {
       "version": "0.1.1",
       "date": "2026-11-21",
       "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",

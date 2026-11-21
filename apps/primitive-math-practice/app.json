@@ -24,6 +24,24 @@
   },
   "versions": [
     {
+      "version": "0.1.2",
+      "date": "2026-11-22",
+      "notes": "The library icon has a dark form, shown in dark mode.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-math-practice/releases/download/v0.1.2/primitive-math-practice-0.1.2-armhf.zip",
+          "sha256": "a81108055936740169e56f90385e9628a00fa15ac62d6b2c4f3e244217297243",
+          "size": 2697521
+        }
+      }
+    },
+    {
       "version": "0.1.1",
       "date": "2026-11-21",
       "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",

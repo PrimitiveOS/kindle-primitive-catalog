@@ -24,6 +24,24 @@
   },
   "versions": [
     {
+      "version": "0.1.2",
+      "date": "2026-11-22",
+      "notes": "The library entry declares the wake header, so the app redraws after sleep and theme changes.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-app-template/releases/download/v0.1.2/primitive-hello-0.1.2-armhf.zip",
+          "sha256": "eb8c421abd38a913da797e5dae80d74c69b08d1c6307e9b98f9040f96141fd66",
+          "size": 2628537
+        }
+      }
+    },
+    {
       "version": "0.1.0",
       "date": "2026-11-19",
       "notes": "Initial release.",
