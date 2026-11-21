@@ -26,6 +26,24 @@
   },
   "versions": [
     {
+      "version": "0.1.10",
+      "date": "2026-11-21",
+      "notes": "Installs by architecture only. Apps are not limited by Kindle firmware; an app with no package for this Kindle's architecture (armhf) is not listed. The app page says \"Not tested on your Kindle yet\" when the Kindle model is not one the app was tested on, and that the model is not known when the launcher could not tell it. The Kindle model comes from the launcher (Settings › Device).",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.10/primitive-store-0.1.10-armhf.zip",
+          "sha256": "83eb742fcc9f969edd9111ce46da2cda6bdb81c7608a3fbf5c4042646157afab",
+          "size": 3900745
+        }
+      }
+    },
+    {
       "version": "0.1.9",
       "date": "2026-11-21",
       "notes": "A tap on a tab, a button, a row or a card is shown reversed before its action runs, as on the home screen. Store redraws when the launcher asks, after a theme change.",
