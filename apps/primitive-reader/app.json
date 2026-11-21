@@ -12,7 +12,7 @@
   ],
   "repo": "https://github.com/PrimitiveOS/kindle-primitive-reader",
   "licence": "PolyForm-Noncommercial-1.0.0",
-  "description": "Read books, PDFs, comics and documents offline with page turns or scrolling. Keep bookmarks, highlights and notes, look up words in local dictionaries, and recognize text on scans.\n\nOpen Reader from Launcher or choose Open in Reader in Files. Browse Documents by folder with file type, size, and support labels.\n\nSwipe from the top for navigation and display settings, or from the bottom for typography, PDF view and scan controls.",
+  "description": "Read EPUB, DRM-free AZW3 and MOBI, PDFs, comics and documents from the Kindle Documents folder. Browse chapters, follow links, adjust type and margins, and keep bookmarks, highlights and notes. Read extracted EPUB folders with their illustrations.\n\nUse physical buttons or touch, track book or chapter progress in the footer, and choose actions for reading gestures. Straighten scanned pages and recognize text offline with the included English OCR model.\n\nLocal dictionaries work offline. You can also select a passage and choose Wikipedia or translation. Reader shows the provider and text before sending an online request.",
   "source": "hosted",
   "icon": "icon.png",
   "screenshots": [
@@ -23,14 +23,34 @@
     "shots/5.png"
   ],
   "changes": {
-    "network": false,
+    "network": true,
     "stops_kindle_ui": false,
     "starts_at_boot": false,
     "root_filesystem": false,
     "hooks": false,
-    "notes": "Saves reading progress, annotations and preferences in Reader’s data folder."
+    "notes": "Saves progress and annotations in Reader’s data folder. Wikipedia and translation send text only after you choose the online action."
   },
   "versions": [
+    {
+      "version": "0.1.6",
+      "date": "2026-11-22",
+      "notes": "Open more EPUB, AZW3 and MOBI books, including illustrated chapters and extracted EPUB folders. Reader adds customizable gestures, reading progress, scan straightening, offline OCR and optional Wikipedia and translation.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.6/primitive-reader-0.1.6-armhf.zip",
+          "sha256": "aac72b27e8edcdd53f245f59670e45b4808fdc537d3004d4840e5c5492ecc6d6",
+          "size": 18060658
+        }
+      }
+    },
     {
       "version": "0.1.5",
       "date": "2026-11-21",
@@ -40,7 +60,9 @@
         "max": null
       },
       "requires": {},
-      "tested_on": ["KindleOasis3"],
+      "tested_on": [
+        "KindleOasis3"
+      ],
       "assets": {
         "armhf": {
           "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.5/primitive-reader-0.1.5-armhf.zip",
