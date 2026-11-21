@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.15",
+      "date": "2026-11-22",
+      "notes": "Browse printed page labels and display them in the margin or footer. Read with embedded publisher font styles and search up to 5,000 reflowable text matches.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.15/primitive-reader-0.1.15-armhf.zip",
+          "sha256": "ce6bc6d80819d7f61438d947df20bbfe80a446b0dcd218635fcb5377c85634fd",
+          "size": 18713005
+        }
+      }
+    },
+    {
       "version": "0.1.14",
       "date": "2026-11-22",
       "notes": "Read GIF illustrations, search with patterns or plain keyboard punctuation, set dictionary order for each book and edit hyphenation for a language.",
