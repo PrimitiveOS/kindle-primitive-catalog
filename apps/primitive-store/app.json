@@ -26,6 +26,24 @@
   },
   "versions": [
     {
+      "version": "0.1.9",
+      "date": "2026-11-21",
+      "notes": "A tap on a tab, a button, a row or a card is shown reversed before its action runs, as on the home screen. Store redraws when the launcher asks, after a theme change.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.9/primitive-store-0.1.9-armhf.zip",
+          "sha256": "06b7874269bf44fed3f10567fe56e7ccc3f5c70894b2393c42bbf3090530c6ba",
+          "size": 3899294
+        }
+      }
+    },
+    {
       "version": "0.1.8",
       "date": "2026-11-21",
       "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
