@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.9",
+      "date": "2026-11-22",
+      "notes": "Open Contents at the current section. Zoomed PDF links bring the specified passage into view. Optional automatic English hyphenation keeps search and bookmarks tied to the original text.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.9/primitive-reader-0.1.9-armhf.zip",
+          "sha256": "e435787ec3ac1aeeaf38723a8e5f05fa9d1bcf148891c98ca17ac12b1132a59b",
+          "size": 18289301
+        }
+      }
+    },
+    {
       "version": "0.1.8",
       "date": "2026-11-22",
       "notes": "Numbered and nested lists keep their markers. Read supported tables in columns and select text in a cell. Avoid extra blank pages at chapter ends and show more mathematical symbols using installed Kindle fonts.",
