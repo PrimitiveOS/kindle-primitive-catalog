@@ -32,6 +32,24 @@
   },
   "versions": [
     {
+      "version": "0.1.4",
+      "date": "2026-11-21",
+      "notes": "Follows Primitive Launcher's system layer: the theme is the system's, and the power listener survives the redraw signal. A dark library icon. The button that leaves the reader says Exit.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.4/primitive-reader-0.1.4-armhf.zip",
+          "sha256": "1d943bfecf6593e476d3d775f86beffac02a5eb559a94ada849790222734f247",
+          "size": 13883696
+        }
+      }
+    },
+    {
       "version": "0.1.2",
       "date": "2026-11-21",
       "notes": "Swipe for icon-based navigation and live reading settings. Reader adds facing pages, independent margins, scan controls, dictionary sources, and an expanded book map and page browser.",
