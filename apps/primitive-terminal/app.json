@@ -26,6 +26,31 @@
   },
   "versions": [
     {
+      "version": "0.2.0",
+      "date": "2026-11-21",
+      "notes": "Built on the PrimitiveOS app kit, like the other apps: taps on the keys and the Exit button reverse black and white while they are held. Under Primitive Launcher it follows the theme and sleep.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-terminal/releases/download/v0.2.0/primitive-terminal-0.2.0-armhf.zip",
+          "sha256": "bb0047652d3ba5e98b2cff4c6c1825814bec8c07303d5ecfee9b5428501963bd",
+          "size": 3078844
+        },
+        "armel": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-terminal/releases/download/v0.2.0/primitive-terminal-0.2.0-armel.zip",
+          "sha256": "856d3f971c1f3c07b8e6c54d19cd4ed0e0ee32086ae125a4f35290262cec9e97",
+          "size": 3125722
+        }
+      }
+    },
+    {
       "version": "0.1.9",
       "date": "2026-11-21",
       "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
