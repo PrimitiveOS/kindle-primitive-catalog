@@ -26,6 +26,26 @@
   },
   "versions": [
     {
+      "version": "0.1.8",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-store/releases/download/v0.1.8/primitive-store-0.1.8-armhf.zip",
+          "sha256": "7b1ca5c2cf92fa678efdb91472266ab3c58392ba6f9268cd7a4f55e598f24c2a",
+          "size": 3894825
+        }
+      }
+    },
+    {
       "version": "0.1.7",
       "date": "2026-11-20",
       "notes": "Refresh from the PrimitiveOS organization’s Store catalog.",

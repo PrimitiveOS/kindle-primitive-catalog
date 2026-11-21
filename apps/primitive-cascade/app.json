@@ -24,6 +24,26 @@
   },
   "versions": [
     {
+      "version": "0.1.1",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-cascade/releases/download/v0.1.1/primitive-cascade-0.1.1-armhf.zip",
+          "sha256": "8c3643184b2f0c597234e11b19f61f9fec86f1d34c84fe2c54f8083be41fcc49",
+          "size": 2683041
+        }
+      }
+    },
+    {
       "version": "0.1.0",
       "date": "2026-11-19",
       "notes": "Initial release.",

@@ -24,6 +24,26 @@
   },
   "versions": [
     {
+      "version": "0.1.2",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-cards/releases/download/v0.1.2/primitive-cards-0.1.2-armhf.zip",
+          "sha256": "f14a754c5c308d2a9c80c305a387c3296dcc26ce6ae6325be4ee0aca21bb1620",
+          "size": 3773888
+        }
+      }
+    },
+    {
       "version": "0.1.1",
       "date": "2026-11-20",
       "notes": "Run a self-test of up to ten cards per deck, resume it later, and retry missed answers without changing scheduled reviews.\nPreview and import UTF-8 text decks from Documents with duplicate skipping.",

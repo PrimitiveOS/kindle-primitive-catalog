@@ -24,6 +24,26 @@
   },
   "versions": [
     {
+      "version": "0.1.1",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-language-practice/releases/download/v0.1.1/primitive-language-practice-0.1.1-armhf.zip",
+          "sha256": "39182856de2a04044fcf0f49e049e51c7b229086fb21e2146cf8ddaf0887f173",
+          "size": 2691981
+        }
+      }
+    },
+    {
       "version": "0.1.0",
       "date": "2026-11-20",
       "notes": "Initial release of Language Practice for PrimitiveOS.",

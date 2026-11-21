@@ -24,6 +24,26 @@
   },
   "versions": [
     {
+      "version": "0.1.1",
+      "date": "2026-11-21",
+      "notes": "Works with Primitive Launcher's system layer: quick settings and the power button work over the app, and it follows light and dark mode. The exit button says Exit.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-math-practice/releases/download/v0.1.1/primitive-math-practice-0.1.1-armhf.zip",
+          "sha256": "da6584f8792e070a98f9fd59a6e94c3b0f6a3aec60c9ba8638ffb098f549c16d",
+          "size": 2690131
+        }
+      }
+    },
+    {
       "version": "0.1.0",
       "date": "2026-11-20",
       "notes": "Initial release of Math Practice for PrimitiveOS.",
