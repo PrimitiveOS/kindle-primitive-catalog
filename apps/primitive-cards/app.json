@@ -32,7 +32,9 @@
         "max": null
       },
       "requires": {},
-      "tested_on": [],
+      "tested_on": [
+        "KindleOasis3"
+      ],
       "assets": {
         "armhf": {
           "url": "https://github.com/PrimitiveOS/kindle-primitive-cards/releases/download/v0.1.3/primitive-cards-0.1.3-armhf.zip",
