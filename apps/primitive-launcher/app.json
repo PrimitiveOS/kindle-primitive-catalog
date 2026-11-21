@@ -31,6 +31,26 @@
   },
   "versions": [
     {
+      "version": "0.6.18",
+      "date": "2026-11-21",
+      "notes": "Settings has its gear as an icon like the other apps, in light and dark mode. A file transfer answers a wrong code without a connection reset.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.6.18/primitive-launcher-0.6.18-armhf.zip",
+          "sha256": "d775e3a682297d68a3130223b42a219319ea8690d38d7b51aa11caa74998b7e0",
+          "size": 4642311
+        }
+      }
+    },
+    {
       "version": "0.5.9",
       "date": "2026-11-20",
       "notes": "See app versions and uninstall installed packages from Settings › Apps › Installed apps. The list works offline and Home refreshes after removal.\nVerified the in-place update and Settings uninstall on Kindle Oasis 3 with firmware 5.18.2.",
