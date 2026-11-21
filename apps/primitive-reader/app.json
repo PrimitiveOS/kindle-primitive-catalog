@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.12",
+      "date": "2026-11-22",
+      "notes": "Import nearby EPUB bookmarks and highlights. Preserve publisher paragraph indents, including chapter-opening styles. Find phrases across printed PDF lines. Inspect a PDF link, copy its address or show its QR code.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.12/primitive-reader-0.1.12-armhf.zip",
+          "sha256": "9e073dcc676a97cbae7671c5bd16424ad9b502a138e2c96bd6534ad12b32805a",
+          "size": 18481024
+        }
+      }
+    },
+    {
       "version": "0.1.11",
       "date": "2026-11-22",
       "notes": "Import nearby saved positions from KOReader, open DjVu chapter outlines, and extend saved highlights across chapters or fixed pages.",
