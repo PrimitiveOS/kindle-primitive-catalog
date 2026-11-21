@@ -42,11 +42,6 @@
           "url": "https://github.com/PrimitiveOS/kindle-primitive-terminal/releases/download/v0.2.0/primitive-terminal-0.2.0-armhf.zip",
           "sha256": "bb0047652d3ba5e98b2cff4c6c1825814bec8c07303d5ecfee9b5428501963bd",
           "size": 3078844
-        },
-        "armel": {
-          "url": "https://github.com/PrimitiveOS/kindle-primitive-terminal/releases/download/v0.2.0/primitive-terminal-0.2.0-armel.zip",
-          "sha256": "856d3f971c1f3c07b8e6c54d19cd4ed0e0ee32086ae125a4f35290262cec9e97",
-          "size": 3125722
         }
       }
     },
