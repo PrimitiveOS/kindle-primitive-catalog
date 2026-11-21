@@ -32,7 +32,7 @@
         "max": null
       },
       "requires": {},
-      "tested_on": [],
+      "tested_on": ["KindleOasis3"],
       "assets": {
         "armhf": {
           "url": "https://github.com/PrimitiveOS/kindle-primitive-crate-shift/releases/download/v0.1.4/primitive-crateshift-0.1.4-armhf.zip",
