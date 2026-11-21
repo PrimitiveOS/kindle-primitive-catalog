@@ -33,7 +33,7 @@
         "max": null
       },
       "requires": {},
-      "tested_on": [],
+      "tested_on": ["KindleOasis3"],
       "assets": {
         "armhf": {
           "url": "https://github.com/PrimitiveOS/kindle-primitive-reading-practice/releases/download/v0.1.2/primitive-reading-practice-0.1.2-armhf.zip",
