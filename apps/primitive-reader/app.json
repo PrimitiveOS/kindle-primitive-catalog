@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.16",
+      "date": "2026-11-22",
+      "notes": "Generate stable page numbers for EPUBs, search PDF and DjVu pages in either direction and read supported publisher fonts in EPUB and Kindle editions.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.16/primitive-reader-0.1.16-armhf.zip",
+          "sha256": "f30366300904b3f12526927de2b6ac4eae6b7891e8636a7711d71db41bdb0e46",
+          "size": 18750853
+        }
+      }
+    },
+    {
       "version": "0.1.15",
       "date": "2026-11-22",
       "notes": "Browse printed page labels and display them in the margin or footer. Read with embedded publisher font styles and search up to 5,000 reflowable text matches.",
