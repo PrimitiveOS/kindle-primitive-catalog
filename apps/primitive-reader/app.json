@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.23",
+      "date": "2026-11-22",
+      "notes": "Set custom automatic page-turn timing and distance. Pan fixed-page documents by 40% overlap and handle fractional page turns consistently.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.23/primitive-reader-0.1.23-armhf.zip",
+          "sha256": "49562aae41bab0d5e6e635fa284d71e536e7155cd77c42568e45f5a90130d8b8",
+          "size": 21272254
+        }
+      }
+    },
+    {
       "version": "0.1.22",
       "date": "2026-11-22",
       "notes": "Use publisher contents in supported AZW3 and MOBI books, set a read timer, choose an end-of-book action, and read more accurate EPUB table columns.",
