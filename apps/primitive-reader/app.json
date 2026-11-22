@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.17",
+      "date": "2026-11-22",
+      "notes": "Read raised footnotes and lowered subscripts, check chapter and book reading times, and find whole words in PDFs. Eligible CMYK print images load faster at page fit.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.17/primitive-reader-0.1.17-armhf.zip",
+          "sha256": "5446385de18dfb42845623b308072ab58e1b176f7ec718d31b0ad75bd612ad62",
+          "size": 18871489
+        }
+      }
+    },
+    {
       "version": "0.1.16",
       "date": "2026-11-22",
       "notes": "Generate stable page numbers for EPUBs, search PDF and DjVu pages in either direction and read supported publisher fonts in EPUB and Kindle editions.",
