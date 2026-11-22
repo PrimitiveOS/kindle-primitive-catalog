@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.20",
+      "date": "2026-11-22",
+      "notes": "Honor EPUB publisher page breaks and keep paragraphs together. Find similar spellings in the dictionary popup.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.20/primitive-reader-0.1.20-armhf.zip",
+          "sha256": "e7c9835e9fa66ef3cc16f5053cb4ba7594da4c83b144aa4cc6b4b83f4e19ea72",
+          "size": 19002787
+        }
+      }
+    },
+    {
       "version": "0.1.19",
       "date": "2026-11-22",
       "notes": "Recover inline images and links in legacy MOBI books, look up English word forms, read beneath the status bar, and browse up to 5,000 fixed-page search results.",
