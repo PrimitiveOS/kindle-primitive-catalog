@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.18",
+      "date": "2026-11-22",
+      "notes": "Set individual page margins, keep original EPUB text decorations, and jump to PDF search endpoints. PDF search recognizes equivalent Unicode forms.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.18/primitive-reader-0.1.18-armhf.zip",
+          "sha256": "ce3cd0180d664d6dc4c33d82553c276dbe7e49bbe669b0b9e985988a5480b5dd",
+          "size": 18911088
+        }
+      }
+    },
+    {
       "version": "0.1.17",
       "date": "2026-11-22",
       "notes": "Read raised footnotes and lowered subscripts, check chapter and book reading times, and find whole words in PDFs. Eligible CMYK print images load faster at page fit.",
