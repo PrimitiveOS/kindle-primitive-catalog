@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.21",
+      "date": "2026-11-22",
+      "notes": "Tune justified word expansion and CJK width, honor publisher padding and legacy MOBI alignment, and search long PDFs faster.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.21/primitive-reader-0.1.21-armhf.zip",
+          "sha256": "0e16f96ffc8746ac074b2c0d299cd811ff88342c25bce94130e72b171cc6675d",
+          "size": 19042677
+        }
+      }
+    },
+    {
       "version": "0.1.20",
       "date": "2026-11-22",
       "notes": "Honor EPUB publisher page breaks and keep paragraphs together. Find similar spellings in the dictionary popup.",
