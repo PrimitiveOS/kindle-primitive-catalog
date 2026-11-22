@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.22",
+      "date": "2026-11-22",
+      "notes": "Use publisher contents in supported AZW3 and MOBI books, set a read timer, choose an end-of-book action, and read more accurate EPUB table columns.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.22/primitive-reader-0.1.22-armhf.zip",
+          "sha256": "91a329b6758bb06b5bad900ea3b8992ce9326a465a56a3454077bfb775288987",
+          "size": 19103778
+        }
+      }
+    },
+    {
       "version": "0.1.21",
       "date": "2026-11-22",
       "notes": "Tune justified word expansion and CJK width, honor publisher padding and legacy MOBI alignment, and search long PDFs faster.",
