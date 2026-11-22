@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.19",
+      "date": "2026-11-22",
+      "notes": "Recover inline images and links in legacy MOBI books, look up English word forms, read beneath the status bar, and browse up to 5,000 fixed-page search results.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.19/primitive-reader-0.1.19-armhf.zip",
+          "sha256": "fd2df63d8d67cc0c6dacf650385af4bb7801649b972a659fa6864b92eafc7a78",
+          "size": 18968218
+        }
+      }
+    },
+    {
       "version": "0.1.18",
       "date": "2026-11-22",
       "notes": "Set individual page margins, keep original EPUB text decorations, and jump to PDF search endpoints. PDF search recognizes equivalent Unicode forms.",
