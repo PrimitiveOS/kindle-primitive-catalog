@@ -107,7 +107,8 @@ def collect(apps, token):
             row["downloads"], row["packages"] = report_app(listing, releases(match[1], token))
         except HTTPError as error:
             row["error"] = f"GitHub API returned HTTP {error.code}"
-            error.close()
+            if error.fp is not None:
+                error.close()
         except (URLError, TimeoutError, OSError):
             row["error"] = "Unable to read the GitHub API"
         except (ValueError, KeyError, TypeError):

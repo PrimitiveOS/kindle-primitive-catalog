@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.25",
+      "date": "2026-11-24",
+      "notes": "Keep the chapter/page footer caption hyphenated. Add an optional saved bold-text setting and measure its width so the progress track stays clear of Exit.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.25/primitive-reader-0.1.25-armhf.zip",
+          "sha256": "678f42f3e44b1f32a08526c819fda4c7e3cf8efc9a714f4613383a59f274e4db",
+          "size": 21252010
+        }
+      }
+    },
+    {
       "version": "0.1.23",
       "date": "2026-11-22",
       "notes": "Set custom automatic page-turn timing and distance. Pan fixed-page documents by 40% overlap and handle fractional page turns consistently.",
