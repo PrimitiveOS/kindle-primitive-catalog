@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.40",
+      "date": "2026-11-24",
+      "notes": "Add thumbnail bookmarks, honor publisher image size limits, and avoid scan specks when measuring PDF crops.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.40/primitive-reader-0.1.40-armhf.zip",
+          "sha256": "65f2023a60ae2cdc6a37db39c49bf098041de89f2951ee8ae3506af206b6f5ba",
+          "size": 21617207
+        }
+      }
+    },
+    {
       "version": "0.1.39",
       "date": "2026-11-24",
       "notes": "Add custom footer item cycling, saved folder sorting, adjustable footnote size and PDF chapter editing from thumbnails.",
