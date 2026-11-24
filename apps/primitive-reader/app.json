@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.44",
+      "date": "2026-11-24",
+      "notes": "Adjust PDF reflow spacing, choose local annotation filenames and folders, reset statistics for one book and period, and save portrait orientation with a compatible Launcher.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.44/primitive-reader-0.1.44-armhf.zip",
+          "sha256": "f11145bbf5e2552e4c572e16a07fb7c655b0a4819376ff78041ef00792b61994",
+          "size": 21723051
+        }
+      }
+    },
+    {
       "version": "0.1.43",
       "date": "2026-11-24",
       "notes": "Adjust detected PDF crop margins and explore all eight reading statistics Time range reports.",
