@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.43",
+      "date": "2026-11-24",
+      "notes": "Adjust detected PDF crop margins and explore all eight reading statistics Time range reports.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.43/primitive-reader-0.1.43-armhf.zip",
+          "sha256": "89edbe003b1f054e936841ad47e310089e1e7ce3df9658c29bab4da4ba5fa0f8",
+          "size": 21698084
+        }
+      }
+    },
+    {
       "version": "0.1.42",
       "date": "2026-11-24",
       "notes": "Archive books from the library, change supported scans' contrast, and return to the most recent bookmark with a swipe.",
