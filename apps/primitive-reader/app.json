@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.27",
+      "date": "2026-11-24",
+      "notes": "Reading clocks, alarms, saved marks, the reading calendar, and vocabulary review dates now follow the Kindle system time zone.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.27/primitive-reader-0.1.27-armhf.zip",
+          "sha256": "be7545c6fce8554e1b0441f4ae1eb0acaabaefb847c0a566d62167d0c1572f5e",
+          "size": 21243208
+        }
+      }
+    },
+    {
       "version": "0.1.26",
       "date": "2026-11-24",
       "notes": "The footer shows Chapter x of y - Page m of n above the progress bar. Choose a footer font, add custom text, save status bar presets, or reverse the physical page buttons.",
