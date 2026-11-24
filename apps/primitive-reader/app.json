@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.33",
+      "date": "2026-11-24",
+      "notes": "Size search rows to their text, focus the list near the current page, return to the query origin, and preview PDF hits at full-page fit.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.33/primitive-reader-0.1.33-armhf.zip",
+          "sha256": "e4ba1aeb4dd099116eb3b5de086a5ede04252d2aeb4582f3b11f3473135fb3a4",
+          "size": 21342490
+        }
+      }
+    },
+    {
       "version": "0.1.32",
       "date": "2026-11-24",
       "notes": "Configure selected-text search, results per page and context, fit fixed pages temporarily, and show bookmark dividers and highlight cues.",
