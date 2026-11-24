@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.31",
+      "date": "2026-11-24",
+      "notes": "Fit more bookmark text, use selected Contents levels for chapter titles and time remaining, and set the top header font and stable page labels.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.31/primitive-reader-0.1.31-armhf.zip",
+          "sha256": "15307b554c7e785e0f2999b9a255170cae9de2e11e7220b582d2dcc81dcde75b",
+          "size": 21347826
+        }
+      }
+    },
+    {
       "version": "0.1.30",
       "date": "2026-11-24",
       "notes": "Choose chapter levels for jumps or progress markers, adjust the bookmark list, and turn the top status header on or off per book.",
