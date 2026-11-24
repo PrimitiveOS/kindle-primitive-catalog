@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.45",
+      "date": "2026-11-24",
+      "notes": "Show configurable reading guides and inspect the original publisher markup for a verified selection within one EPUB chapter.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.45/primitive-reader-0.1.45-armhf.zip",
+          "sha256": "571095e3ce68beb36496ec2317ed59acdfa40e5ab856149401692bae9f3c813e",
+          "size": 21732421
+        }
+      }
+    },
+    {
       "version": "0.1.44",
       "date": "2026-11-24",
       "notes": "Adjust PDF reflow spacing, choose local annotation filenames and folders, reset statistics for one book and period, and save portrait orientation with a compatible Launcher.",
