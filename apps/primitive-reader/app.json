@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.28",
+      "date": "2026-11-24",
+      "notes": "Search and collapse the Contents tree to find chapters. Reader shows the exact scheduled time, recurrence, and alert behavior before starting a reading alarm.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.28/primitive-reader-0.1.28-armhf.zip",
+          "sha256": "d47fffe805057883fd5cbcec6bc8c47348766d7936976750b9eecc0261b11789",
+          "size": 21281448
+        }
+      }
+    },
+    {
       "version": "0.1.27",
       "date": "2026-11-24",
       "notes": "Reading clocks, alarms, saved marks, the reading calendar, and vocabulary review dates now follow the Kindle system time zone.",
