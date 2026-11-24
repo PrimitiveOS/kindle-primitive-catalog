@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.39",
+      "date": "2026-11-24",
+      "notes": "Add custom footer item cycling, saved folder sorting, adjustable footnote size and PDF chapter editing from thumbnails.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.39/primitive-reader-0.1.39-armhf.zip",
+          "sha256": "f3152da55a8ec4915d4890fa92e4ac9f09a038430a0a7e7a8f378be671da22ce",
+          "size": 21601194
+        }
+      }
+    },
+    {
       "version": "0.1.38",
       "date": "2026-11-24",
       "notes": "Add whole-book chapter marks in the top header, book-font footnotes, adjacent-file navigation and semi-automatic PDF crop.",
