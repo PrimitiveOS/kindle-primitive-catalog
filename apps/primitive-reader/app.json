@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.47",
+      "date": "2026-11-24",
+      "notes": "Show pictures with captions and wrapping in Wikipedia articles.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.47/primitive-reader-0.1.47-armhf.zip",
+          "sha256": "146bdef5cc578269ee3c6459cd7f5be7e45816e18b17a98ab542bb518f9c2378",
+          "size": 21826809
+        }
+      }
+    },
+    {
       "version": "0.1.46",
       "date": "2026-11-24",
       "notes": "Choose where the Skim preview opens, jump ten pages, and optionally save the opening position in location history.",
