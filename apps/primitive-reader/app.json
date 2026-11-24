@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.49",
+      "date": "2026-11-24",
+      "notes": "Skim by chapter or saved mark, bookmark a page, and select which settings a reading profile applies.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.49/primitive-reader-0.1.49-armhf.zip",
+          "sha256": "c0da8ff297000c7638a9dba2f74c02ac8222eb81864e69ccf63e895b12a19b13",
+          "size": 21898756
+        }
+      }
+    },
+    {
       "version": "0.1.48",
       "date": "2026-11-24",
       "notes": "Save named reading profiles for reflowable books and PDFs.",
