@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.41",
+      "date": "2026-11-24",
+      "notes": "Add per-page crops for scrolling PDFs, reading-based folder sorts, and resets for local reading statistics.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.41/primitive-reader-0.1.41-armhf.zip",
+          "sha256": "f1e6d0e398b7ba31a6425abeef2e20416c9cf6c0bbf8c2a31b03ea73b715a540",
+          "size": 21631505
+        }
+      }
+    },
+    {
       "version": "0.1.40",
       "date": "2026-11-24",
       "notes": "Add thumbnail bookmarks, honor publisher image size limits, and avoid scan specks when measuring PDF crops.",
