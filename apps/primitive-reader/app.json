@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.29",
+      "date": "2026-11-24",
+      "notes": "Adjust Contents row count and font size, show chapter lengths or dot leaders, and jump directly to the previous or next chapter.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.29/primitive-reader-0.1.29-armhf.zip",
+          "sha256": "16f8a8d021e05d8d433179bdaed486000aa086cc7b24513a4361eef27c4bb850",
+          "size": 21296290
+        }
+      }
+    },
+    {
       "version": "0.1.28",
       "date": "2026-11-24",
       "notes": "Search and collapse the Contents tree to find chapters. Reader shows the exact scheduled time, recurrence, and alert behavior before starting a reading alarm.",
