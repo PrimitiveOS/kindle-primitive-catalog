@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.35",
+      "date": "2026-11-24",
+      "notes": "Show whole-book screen pages in the optional EPUB header, save dictionary popup preferences, and choose how EPUB and PDF link taps behave.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.35/primitive-reader-0.1.35-armhf.zip",
+          "sha256": "f8860f8357135fb093c7cccb3413382bcc3eea962ffdb035299c952065a05524",
+          "size": 21415852
+        }
+      }
+    },
+    {
       "version": "0.1.34",
       "date": "2026-11-24",
       "notes": "Restrict search results to the current chapter and restore all matches, while retaining exact jumps for EPUB and PDF results.",
