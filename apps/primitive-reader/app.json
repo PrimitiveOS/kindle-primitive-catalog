@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.36",
+      "date": "2026-11-24",
+      "notes": "Add optional link swipes, structured dictionary entries and local cross-references, and weekly and monthly reading reports.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.36/primitive-reader-0.1.36-armhf.zip",
+          "sha256": "42958296c1ec37393aa21d42bdc6b449bd31a0c7f43a646bc870770cde042a9b",
+          "size": 21447248
+        }
+      }
+    },
+    {
       "version": "0.1.35",
       "date": "2026-11-24",
       "notes": "Show whole-book screen pages in the optional EPUB header, save dictionary popup preferences, and choose how EPUB and PDF link taps behave.",
