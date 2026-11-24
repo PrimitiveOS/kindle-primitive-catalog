@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.50",
+      "date": "2026-11-24",
+      "notes": "Jump to exact and relative reading pages. Keep DjVu scans aligned with selection when zoomed.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.50/primitive-reader-0.1.50-armhf.zip",
+          "sha256": "666f1c8373a4b9eeda490a1edfbb998fc242a2a2890210ae0b1f774143bf246b",
+          "size": 21925303
+        }
+      }
+    },
+    {
       "version": "0.1.49",
       "date": "2026-11-24",
       "notes": "Skim by chapter or saved mark, bookmark a page, and select which settings a reading profile applies.",
