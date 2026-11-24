@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.26",
+      "date": "2026-11-24",
+      "notes": "The footer shows Chapter x of y - Page m of n above the progress bar. Choose a footer font, add custom text, save status bar presets, or reverse the physical page buttons.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.26/primitive-reader-0.1.26-armhf.zip",
+          "sha256": "a21256b97a4fa22799473b3195ec190da37a5678d5978fe3f6ddedb3472c7428",
+          "size": 21246669
+        }
+      }
+    },
+    {
       "version": "0.1.25",
       "date": "2026-11-24",
       "notes": "Keep the chapter/page footer caption hyphenated. Add an optional saved bold-text setting and measure its width so the progress track stays clear of Exit.",
