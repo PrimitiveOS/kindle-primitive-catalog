@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.30",
+      "date": "2026-11-24",
+      "notes": "Choose chapter levels for jumps or progress markers, adjust the bookmark list, and turn the top status header on or off per book.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.30/primitive-reader-0.1.30-armhf.zip",
+          "sha256": "aa60eded61d3a3e8285d22bcd362ac60ff15c5f136cd55be1acf64d12fe9495e",
+          "size": 21298825
+        }
+      }
+    },
+    {
       "version": "0.1.29",
       "date": "2026-11-24",
       "notes": "Adjust Contents row count and font size, show chapter lengths or dot leaders, and jump directly to the previous or next chapter.",
