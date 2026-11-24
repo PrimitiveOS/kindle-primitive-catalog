@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.32",
+      "date": "2026-11-24",
+      "notes": "Configure selected-text search, results per page and context, fit fixed pages temporarily, and show bookmark dividers and highlight cues.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.32/primitive-reader-0.1.32-armhf.zip",
+          "sha256": "cd4e41a4fc711f305062c85426eb8daf46d6d4ffbc591af48d17aae26de04147",
+          "size": 21383487
+        }
+      }
+    },
+    {
       "version": "0.1.31",
       "date": "2026-11-24",
       "notes": "Fit more bookmark text, use selected Contents levels for chapter titles and time remaining, and set the top header font and stable page labels.",
