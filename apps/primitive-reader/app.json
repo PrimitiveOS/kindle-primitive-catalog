@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.46",
+      "date": "2026-11-24",
+      "notes": "Choose where the Skim preview opens, jump ten pages, and optionally save the opening position in location history.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.46/primitive-reader-0.1.46-armhf.zip",
+          "sha256": "7c9b5adc8cf47b73d1c1ac285ad71fb001b3e641138e9a27129c8feef7cb3ad1",
+          "size": 21723814
+        }
+      }
+    },
+    {
       "version": "0.1.45",
       "date": "2026-11-24",
       "notes": "Show configurable reading guides and inspect the original publisher markup for a verified selection within one EPUB chapter.",
