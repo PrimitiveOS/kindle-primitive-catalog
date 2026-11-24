@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.34",
+      "date": "2026-11-24",
+      "notes": "Restrict search results to the current chapter and restore all matches, while retaining exact jumps for EPUB and PDF results.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.34/primitive-reader-0.1.34-armhf.zip",
+          "sha256": "92ca791a88bd1f6fa1914503141013b6676f0807cc6303cae2a0764920850f54",
+          "size": 21392971
+        }
+      }
+    },
+    {
       "version": "0.1.33",
       "date": "2026-11-24",
       "notes": "Size search rows to their text, focus the list near the current page, return to the query origin, and preview PDF hits at full-page fit.",
