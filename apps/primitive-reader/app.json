@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.38",
+      "date": "2026-11-24",
+      "notes": "Add whole-book chapter marks in the top header, book-font footnotes, adjacent-file navigation and semi-automatic PDF crop.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.38/primitive-reader-0.1.38-armhf.zip",
+          "sha256": "405196660ba176cbc8bf491a182f193475b3f8a48184faa37961ce39e713111d",
+          "size": 21523845
+        }
+      }
+    },
+    {
       "version": "0.1.37",
       "date": "2026-11-24",
       "notes": "Add Kindle clippings export, current book folder, column and row zoom, and a close-all gesture for dictionary lookups.",
