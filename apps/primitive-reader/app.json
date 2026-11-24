@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.42",
+      "date": "2026-11-24",
+      "notes": "Archive books from the library, change supported scans' contrast, and return to the most recent bookmark with a swipe.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.42/primitive-reader-0.1.42-armhf.zip",
+          "sha256": "bf41edc8d034f6b2dfb8bdef9648e44a973b7ed348dd72882072e1f0b61376b1",
+          "size": 21686023
+        }
+      }
+    },
+    {
       "version": "0.1.41",
       "date": "2026-11-24",
       "notes": "Add per-page crops for scrolling PDFs, reading-based folder sorts, and resets for local reading statistics.",
