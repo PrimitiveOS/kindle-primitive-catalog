@@ -32,6 +32,26 @@
   },
   "versions": [
     {
+      "version": "0.1.37",
+      "date": "2026-11-24",
+      "notes": "Add Kindle clippings export, current book folder, column and row zoom, and a close-all gesture for dictionary lookups.",
+      "firmware": {
+        "min": "5.18.2",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-reader/releases/download/v0.1.37/primitive-reader-0.1.37-armhf.zip",
+          "sha256": "8d324ae43c5d430b024ea4943009898e229ca135929435bba4aa05d1e2718b12",
+          "size": 21515843
+        }
+      }
+    },
+    {
       "version": "0.1.36",
       "date": "2026-11-24",
       "notes": "Add optional link swipes, structured dictionary entries and local cross-references, and weekly and monthly reading reports.",
