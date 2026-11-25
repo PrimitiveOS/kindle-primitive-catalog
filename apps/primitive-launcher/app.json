@@ -31,6 +31,26 @@
   },
   "versions": [
     {
+      "version": "0.8.3",
+      "date": "2026-11-25",
+      "notes": "Bluetooth: Settings › Network › Bluetooth turns Bluetooth on and off, finds headphones and speakers, and pairs, connects, disconnects and forgets them. Test sound plays a short tone through the connected headphones. The status bar and quick settings show Bluetooth, and headphones while audio is connected. Keyboards are not supported yet.\nVerified on Kindle Oasis 3 with firmware 5.18.2 and AirPods Pro.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.8.3/primitive-launcher-0.8.3-armhf.zip",
+          "sha256": "bcc5878ea68edadbf7506d101f9784e0a76238e4bef8e647e0db6d52336bb92f",
+          "size": 4742164
+        }
+      }
+    },
+    {
       "version": "0.6.22",
       "date": "2026-11-21",
       "notes": "The device name page says Save, and its top button says Cancel (it leaves without saving). An unset device name shows \"Tap to set\".",
