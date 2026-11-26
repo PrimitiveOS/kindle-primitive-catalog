@@ -31,6 +31,26 @@
   },
   "versions": [
     {
+      "version": "0.8.8",
+      "date": "2026-11-26",
+      "notes": "The sound row sets the media volume that the Music app plays with; quick settings shows a media card while music plays (title, state, previous, play or pause, next); the headphones icon clears when they leave; the installer restarts the launcher with the new build.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-launcher/releases/download/v0.8.8/primitive-launcher-0.8.8-armhf.zip",
+          "sha256": "ea7b15bae2a7b48f87194f130eb1eb9c0ebbd85bd91e200265b5a587df8d1da5",
+          "size": 4755047
+        }
+      }
+    },
+    {
       "version": "0.8.3",
       "date": "2026-11-25",
       "notes": "Bluetooth: Settings › Network › Bluetooth turns Bluetooth on and off, finds headphones and speakers, and pairs, connects, disconnects and forgets them. Test sound plays a short tone through the connected headphones. The status bar and quick settings show Bluetooth, and headphones while audio is connected. Keyboards are not supported yet.\nVerified on Kindle Oasis 3 with firmware 5.18.2 and AirPods Pro.",
