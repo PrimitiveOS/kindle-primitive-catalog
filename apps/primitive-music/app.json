@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "id": "primitive-music",
+  "dir": "music",
+  "name": "Music",
+  "subtitle": "Play music through headphones",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "audio"
+  ],
+  "description": "Play the music files on your Kindle through connected Bluetooth headphones. Browse a library of MP3, FLAC, Ogg, WAV, M4A and AAC files, pause, skip and seek, set the sound level, and keep playing after you leave the app. The media card in quick settings shows what is playing.",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-music",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-26",
+      "notes": "Music 0.1.1: the release package builds against the pinned tools commit. The player applies the sound level to the audio, shows a media card in quick settings, and keeps playing after you leave the app.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-music/releases/download/v0.1.1/primitive-music-0.1.1-armhf.zip",
+          "sha256": "d44d33b3f40879222b0d377d6ac5f28036559ad009168873ee64707c50586965",
+          "size": 3216378
+        }
+      }
+    }
+  ]
+}
