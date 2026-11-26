@@ -22,5 +22,26 @@
     "root_filesystem": false,
     "hooks": false
   },
-  "versions": []
+  "versions": [
+    {
+      "version": "0.1.1",
+      "date": "2026-11-26",
+      "notes": "Music 0.1.1: the release package builds against the pinned tools commit. The player applies the sound level to the audio, shows a media card in quick settings, and keeps playing after you leave the app.",
+      "firmware": {
+        "min": "5.16.3",
+        "max": null
+      },
+      "requires": {},
+      "tested_on": [
+        "KindleOasis3"
+      ],
+      "assets": {
+        "armhf": {
+          "url": "https://github.com/PrimitiveOS/kindle-primitive-music/releases/download/v0.1.1/primitive-music-0.1.1-armhf.zip",
+          "sha256": "d44d33b3f40879222b0d377d6ac5f28036559ad009168873ee64707c50586965",
+          "size": 3216378
+        }
+      }
+    }
+  ]
 }
